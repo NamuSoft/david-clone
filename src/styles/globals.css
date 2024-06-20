@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1f1f1f;
+    font-family: Italiana;
+    font-weight: 400;
+}
+search-form .form-group input[type=text] {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 50px;
+    color: #000;
+    height: 70px;
+    width: 100%;
+    padding: 10px 30px;
+    background: #fff;
+    transition: all .5s ease;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: 50%;
+    border: 0;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.page-title .breadcumb-wrap ol {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
