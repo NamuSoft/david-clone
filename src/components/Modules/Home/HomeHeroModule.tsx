@@ -14,10 +14,10 @@ type Props = {
 // HomeHeroModule functional component
 export const HomeHeroModule = (props: Props) => {
   return (
-    <div className=' mx-auto px-[70px] '>
-      <div className='container-fluid mx-4'>
-        <div className='relative bg-[#ff4a3b]  px-24  pb-24  pt-20'>
-          <div className='flex flex-col items-center  align-middle lg:flex-row'>
+    <div className=' mx-auto  '>
+      <div className='container-fluid  mx-4 '>
+        <div className='relative bg-[#ff4a3b] px-8 xl:px-24   pb-24  pt-20'>
+          <div className='flex flex-col justify-center  justify-items-center items-center  align-middle lg:flex-row'>
             <div className='w-full  pl-4 pr-4  lg:w-3/5 xl:w-2/3'>
               <div className='pt-[60px]'>
                 <div className='css-z1mjt4' style={{ animationDelay: "0ms" }}>
@@ -101,7 +101,7 @@ export const HomeHeroModule = (props: Props) => {
               </div>
             </div>
           </div>
-          <div className='hero-bottom-shape absolute bottom-[-110px] left-0 w-full '>
+          <div className='hero-bottom-shape absolute bottom-[-110px] left-0 w-full  block'>
             <svg
               width='100%'
               height='175'

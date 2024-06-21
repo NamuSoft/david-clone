@@ -1,4 +1,5 @@
 import { HomeHeroModule } from "./HomeHeroModule";
+import { HomeServiceModule } from "./HomeServiceModule";
 
 type Props = {
   title: string;
@@ -7,8 +8,10 @@ type Props = {
 };
 
 export const HomeContentModule = (props: Props) => {
-  return (<div>
-      
-    <HomeHeroModule {...props.heroProps} />
-  </div>);
+  return (
+    <div className='container  mx-auto max-w-full  px-[70px]'>
+      <HomeHeroModule {...props.heroProps} />
+      <HomeServiceModule />
+    </div>
+  );
 };
