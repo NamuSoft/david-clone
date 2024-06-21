@@ -1,13 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.italiana-regular {
+  font-family: "Italiana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a:hover{
+  color: #ff4a3b;
+}
+.hover-primary:hover{
+  color: #ff4a3b;
+
+}
 
 
 h1, h2, h3, h4, h5, h6 {
     color: #1f1f1f;
     font-family: Italiana;
     font-weight: 400;
+}
+.base-black{
+  color: #1f1f1f;
 }
 search-form .form-group input[type=text] {
     position: relative;
@@ -39,3 +82,20 @@ button, input, optgroup, select, textarea {
     display: flex;
     justify-content: flex-end;
 }
+
+.header-style-3 .main-menu ul>li>a, .header-style-4 .main-menu ul>li>a {
+    color: #1f1f1f;
+}
+
+.underscore::before {
+  content: "_";
+}
+
+title-s3 h2 {
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
+}
+/* .ant-input */

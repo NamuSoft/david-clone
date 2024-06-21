@@ -11,6 +11,7 @@ type Props = {
   // Add props here
   showDrawer: () => void;
 };
+
 export type NavItem = {
   name: string;
   url: string;
@@ -67,25 +68,39 @@ const navLinks: Nav = [
 
 export const NavBarAtom = (props: Props) => {
   return (
-    <div className="flex flex-row justify-between bg-white px-20 py-5">
+    <div className='flex flex-row items-center justify-between bg-white px-6 py-5 md:px-20'>
       <div>
-        <SVGAtom iconName="logoBlack" width={195} height={62} />
+        <SVGAtom iconName='logoBlack' width={195} height={62} />
       </div>
-      <div className="flex w-[35%] flex-row justify-between ">
-        {navLinks.map((navItem: NavItem, navIndex: number) => (
-          <div key={navIndex} className="justify-between">
-            {navItem.children ? (
-              <DropdownAtom name={navItem.name} child={navItem.children} />
-            ) : (
-              <Link className="underscore" href={navItem.url}>
-                {navItem.name}
-              </Link>
-            )}
-          </div>
-        ))}
+      <div className='hidden flex-1 justify-center md:flex'>
+        <div className='flex flex-row space-x-6 md:space-x-5 lg:space-x-20'>
+          {navLinks.map((navItem: NavItem, navIndex: number) => (
+            <div key={navIndex}>
+              {navItem.children ? (
+                <DropdownAtom
+                  name={navItem.name}
+                  child={navItem.children}
+                  className='md:text-sm lg:text-xl'
+                />
+              ) : (
+                <Link
+                  className='underscore space-mono-regular block font-normal md:text-sm lg:text-xl'
+                  href={navItem.url}
+                >
+                  {navItem.name}
+                </Link>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="Seach">
-        <p onClick={props.showDrawer}>Search</p>
+      <div className='text-right'>
+        <p
+          onClick={props.showDrawer}
+          className='italiana-regular block cursor-pointer text-xl font-normal'
+        >
+          Search
+        </p>
       </div>
     </div>
   );
