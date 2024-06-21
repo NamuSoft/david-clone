@@ -5,6 +5,71 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Animation */
+@keyframes animation-gkgm2m {
+  0% {
+    transform: translate3d(0px, 100%, 0px);
+    visibility: visible;
+}
+
+100% {
+    transform: translate3d(0px, 0px, 0px);
+}
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+}
+
+100% {
+    transform: rotate(1turn);
+}
+  
+}
+
+@keyframes morphing {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+25% {
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+}
+50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+}
+75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+}
+  
+}
+.css-z1mjt4 {
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    /* animation-delay: 0ms; */
+    animation-name: animation-gkgm2m;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+.rotate {
+  animation: circle 15s linear infinite;
+}
+
+/* Masks */
+ .right-image .right-image-mask {
+    mask-image: url(/images/mask.png);
+    -webkit-mask-image: url(/images/mask.png);
+    mask-size: 100% !important;
+    -webkit-mask-size: 100% !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-repeat: no-repeat !important;
+    max-width: 380px;
+}
+
+/* Fonts */
 .space-mono-regular {
   font-family: "Space Mono", monospace;
   font-weight: 400;
@@ -102,4 +167,32 @@ title-s3 h2 {
     color: #fff;
 }
 /* .ant-input */
+
+
+
+.sub-title{
+  letter-spacing: 10.8px;
+}
+
+.fancy-btn {
+    color: #fff;
+    text-align: center;
+    /* font-family: Italiana; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 157%;
+    letter-spacing: -.32px;
+    width: 126.921px;
+    height: 134.486px;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: morphing 10s infinite;
+    margin-top: 30px;
+    background: none;
+    align-items: center;
+}
 

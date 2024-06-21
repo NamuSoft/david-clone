@@ -10,23 +10,21 @@ type Props = {
 
 export const HomeTemplate = (props: Props) => {
   return (
-    <Layout style={{ height: "100%" }}>
-    
-    {/* <Header style={{ padding: 0, position:"relative"}} className="bg-white"> */}
-        <HomeHeaderModule {...props.homeHeaderModuleProps} />
-    {/* </Header> */}
-    
+    <Layout style={{ height: "100%", backgroundColor: "#1f1f1f" }}>
+      {/* <Header style={{ padding: 0, position:"relative"}} className="bg-white"> */}
+      <HomeHeaderModule {...props.homeHeaderModuleProps} />
+      {/* </Header> */}
 
-    {/* <Content style={{ overflow: "auto", position:"relative" }}> */}
-           <HomeContentModule {...props.homeContentModuleProps}  />
-    {/* </Content> */}
+      {/* <Content style={{ overflow: "auto", position:"relative" }}> */}
+      <HomeContentModule {...props.homeContentModuleProps} />
+      {/* </Content> */}
 
-    {/*
+      {/*
     <Footer style={{ padding: 0, minHeight: 50 }}>
     place for footer module
     </Footer>
     */}
-  </Layout>
+    </Layout>
   );
 };
   

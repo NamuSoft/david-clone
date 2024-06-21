@@ -1,5 +1,4 @@
-
-      /* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /**
@@ -12,7 +11,7 @@ await import("./src/env.js");
 const config = {
   webpack: (config, options) => {
     config.module.rules.push({
-      test: /.svg$/,
+      test: /\.svg$/, // Fixed the regex to properly escape the dot
       use: ["@svgr/webpack"],
     });
     return config;
@@ -26,8 +25,9 @@ const config = {
       },
     ];
   },
+  images: {
+    domains: ["unded-next.netlify.app"],
+  },
 };
 
 export default config;
-
-      

@@ -25,7 +25,10 @@ export const HomeContainer = () => {
   
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     
-    homeContentModuleProps: { title: "HomeContentModule" },
+    homeContentModuleProps: {
+      title: "HomeContentModule", heroProps: {
+      title
+    } },
     homeHeaderModuleProps: {
       navBarProps: {
         theme,
@@ -42,8 +45,9 @@ export const HomeContainer = () => {
         theme,
         openSideDrawer,
         onCloseSideDrawer,
-      }
-    }
+      },
+    },
+
   };
 
   return <HomeTemplate {...homeTemplateProps} />;

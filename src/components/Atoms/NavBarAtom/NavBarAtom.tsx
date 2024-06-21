@@ -81,19 +81,19 @@ export const NavBarAtom = (props: Props) => {
           height={62}
         />
       </div>
-      <div className='hidden flex-1 justify-center md:flex'>
-        <div className='flex flex-row space-x-6 md:space-x-5 lg:space-x-20'>
+      <div className='hidden flex-1 justify-center lg:flex'>
+        <div className='flex flex-row space-x-6 lg:space-x-10 xl:space-x-20'>
           {navLinks.map((navItem: NavItem, navIndex: number) => (
             <div key={navIndex}>
               {navItem.children ? (
                 <DropdownAtom
                   name={navItem.name}
                   child={navItem.children}
-                  className='md:text-sm lg:text-xl'
+                  className='lg:text-sm xl:text-xl'
                 />
               ) : (
                 <Link
-                  className='underscore space-mono-regular block font-normal md:text-sm lg:text-xl'
+                  className='underscore space-mono-regular block font-normal lg:text-sm xl:text-xl'
                   href={navItem.url}
                 >
                   {navItem.name}
@@ -111,7 +111,7 @@ export const NavBarAtom = (props: Props) => {
               onClick={props.showDrawer}
             />
             <div
-              className='flex h-[52px] w-[52px] cursor-pointer flex-row justify-center rounded-full border border-[#ff4a3b] align-middle'
+              className='flex h-[52px] w-[52px] cursor-pointer flex-row justify-center rounded-full lg:border border-[#ff4a3b] align-middle'
               onClick={props.showSideDrawer}
             >
               <MenuOutlined style={{ color: "#fff", fontSize: 22 }} />

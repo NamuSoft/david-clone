@@ -1,12 +1,14 @@
-import { HomeWhatCanWeDoModule } from "./HomeWhatCanWeDoModule";
+import { HomeHeroModule } from "./HomeHeroModule";
 
 type Props = {
   title: string;
+  heroProps: React.ComponentProps<typeof HomeHeroModule>
+
 };
 
 export const HomeContentModule = (props: Props) => {
   return (<div>
-
-    <HomeWhatCanWeDoModule/>
+      
+    <HomeHeroModule {...props.heroProps} />
   </div>);
 };
