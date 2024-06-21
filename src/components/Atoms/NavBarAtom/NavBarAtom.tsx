@@ -3,13 +3,16 @@ import SVGAtom from "../SVGAtom/SVGAtom";
 import Link from "next/link";
 import type { MenuProps } from "antd";
 import { Dropdown, Space } from "antd";
-import { DownOutlined } from "@ant-design/icons";
+import { DownOutlined, MenuOutlined, SearchOutlined } from "@ant-design/icons";
 import React from "react";
 import { DropdownAtom } from "../DropdownAtom/DropdownAtom";
 
 type Props = {
   // Add props here
   showDrawer: () => void;
+  showSideDrawer: () => void;
+  // closeDrawer: () => void;
+  theme: boolean;
 };
 
 export type NavItem = {
@@ -68,9 +71,15 @@ const navLinks: Nav = [
 
 export const NavBarAtom = (props: Props) => {
   return (
-    <div className='flex flex-row items-center justify-between bg-white px-6 py-5 md:px-20'>
+    <div
+      className={`flex flex-row items-center justify-between  ${props.theme ? "bg-base-black text-white" : "base-black bg-white"} px-6 py-5 md:px-20`}
+    >
       <div>
-        <SVGAtom iconName='logoBlack' width={195} height={62} />
+        <SVGAtom
+          iconName={props.theme ? "logo" : "logoBlack"}
+          width={195}
+          height={62}
+        />
       </div>
       <div className='hidden flex-1 justify-center md:flex'>
         <div className='flex flex-row space-x-6 md:space-x-5 lg:space-x-20'>
@@ -94,13 +103,28 @@ export const NavBarAtom = (props: Props) => {
           ))}
         </div>
       </div>
-      <div className='text-right'>
-        <p
-          onClick={props.showDrawer}
-          className='italiana-regular block cursor-pointer text-xl font-normal'
-        >
-          Search
-        </p>
+      <div className='justify-center md:flex'>
+        {props.theme ? (
+          <div className='flex flex-row space-x-6 md:space-x-5 lg:space-x-5'>
+            <SearchOutlined
+              style={{ color: "#ff4a3b", fontSize: 40 }}
+              onClick={props.showDrawer}
+            />
+            <div
+              className='flex h-[52px] w-[52px] cursor-pointer flex-row justify-center rounded-full border border-[#ff4a3b] align-middle'
+              onClick={props.showSideDrawer}
+            >
+              <MenuOutlined style={{ color: "#fff", fontSize: 22 }} />
+            </div>
+          </div>
+        ) : (
+          <p
+            onClick={props.showDrawer}
+            className='italiana-regular block cursor-pointer text-xl font-normal'
+          >
+            Search
+          </p>
+        )}
       </div>
     </div>
   );

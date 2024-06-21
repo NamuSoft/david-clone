@@ -52,6 +52,9 @@ h1, h2, h3, h4, h5, h6 {
 .base-black{
   color: #1f1f1f;
 }
+.bg-base-black{
+  background-color: #1f1f1f;
+}
 search-form .form-group input[type=text] {
     position: relative;
     display: block;
@@ -99,3 +102,4 @@ title-s3 h2 {
     color: #fff;
 }
 /* .ant-input */
+

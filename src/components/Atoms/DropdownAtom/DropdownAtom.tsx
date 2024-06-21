@@ -30,7 +30,7 @@ export const DropdownAtom = (props: Props) => {
         }}
         className={`underscore space-mono-regular block text-xl font-normal ${props.className}`}
         dropdownRender={(menus) => (
-          <div className="pt-8 rounded-none bg-white " >
+          <div className="pt-8 rounded-none  " >
             {menus}
           </div>
         )}

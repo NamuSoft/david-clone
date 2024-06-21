@@ -3,9 +3,10 @@ import { Drawer, Input } from "antd";
 import { CloseOutlined, SearchOutlined } from "@ant-design/icons";
 
 type Props = {
-  title: string;
-  isOpen: boolean;
-  onClose: () => void;
+  // title: string;
+  openDrawer: boolean;
+  onCloseDrawer: () => void;
+  theme: boolean;
 };
 
 export const DrawerAtom = (props: Props) => {
@@ -14,13 +15,13 @@ export const DrawerAtom = (props: Props) => {
   
 
   useEffect(() => {
-    if (props.isOpen) {
+    if (props.openDrawer) {
       setAnimationClass("animate-slideIn");
       
     } else {
       setAnimationClass("animate-slideOut");
     }
-  }, [props.isOpen]);
+  }, [props.openDrawer]);
 
   const SearchIcon = (
     <div className='left-auto right-[25px] top-[25px] rounded-e-full bg-[#ff4a3b] p-4 text-white'>
@@ -35,8 +36,8 @@ export const DrawerAtom = (props: Props) => {
       <Drawer
         placement='top'
         closable={false}
-        onClose={props.onClose}
-        open={props.isOpen}
+        onClose={props.onCloseDrawer}
+        open={props.openDrawer}
         height='100vh'
         className={`custom-drawer ${animationClass}`}
         style={{
@@ -48,7 +49,7 @@ export const DrawerAtom = (props: Props) => {
         <div className='flex flex-row justify-end '>
           <div
             className='left-auto right-[25px] top-[25px] rounded-full bg-[#ff4a3b] p-2 text-white'
-            onClick={props.onClose}
+            onClick={props.onCloseDrawer}
           >
             <CloseOutlined
               style={{ color: "white", fontSize: 20, padding: "10px" }}
