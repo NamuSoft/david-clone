@@ -1,4 +1,5 @@
 import { HomeHeroModule } from "./HomeHeroModule";
+import { HomeMarqueeModule } from "./HomeMarqueeModule";
 import { HomeServiceModule } from "./HomeServiceModule";
 
 type Props = {
@@ -12,6 +13,7 @@ export const HomeContentModule = (props: Props) => {
     <div className='container  mx-auto max-w-full  px-[70px]'>
       <HomeHeroModule {...props.heroProps} />
       <HomeServiceModule />
+      <HomeMarqueeModule/>
     </div>
   );
 };

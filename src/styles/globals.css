@@ -43,7 +43,18 @@
 75% {
     border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
 }
-  
+
+
+}
+
+@keyframes marquee {
+    0% {
+    transform: translateX(0);
+}
+
+    100% {
+    transform: translateX(-50%);
+}
 }
 .css-z1mjt4 {
     animation-duration: 1000ms;
@@ -195,4 +206,23 @@ title-s3 h2 {
     background: none;
     align-items: center;
 }
-
+.marquee{
+    animation: marquee 200s linear infinite;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+.marquee-content {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+.h1Marquee{
+  font-size: 150px;
+  white-space: nowrap;
+  margin-bottom: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
