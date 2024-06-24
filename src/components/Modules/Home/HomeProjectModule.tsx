@@ -1,6 +1,6 @@
 import MarqueeAtom from "~/components/Atoms/MarqueeAtom/MarqueeAtom";
 import { SliderAtom } from "~/components/Atoms/SliderAtom/SliderAtom";
-import { HomeProjectComponent } from "~/components/Components/HomeComponents/HomeProjectComponent";
+import { HomeProjectComponent } from "~/components/Components/HomeProjectComponents/HomeProjectComponent";
 
 type Props = {
   title?: string;

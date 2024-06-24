@@ -9,25 +9,38 @@ import NextArrow from "./NextArrow";
 type Props = {
   children: React.ReactNode;
   className?: string;
+  noarrows?: boolean;
+  autoplay?: boolean;
+  show?: number
 };
 
 export const SliderAtom = (props: Props) => {
   const settings = {
+    useTransform: true,
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: props.show ?? 4,
     slidesToScroll: 1,
-    prevArrow: <PrevArrow />,
-    nextArrow:<NextArrow/>
+    arrows: !props.noarrows,
+    prevArrow: !props.noarrows ? <PrevArrow /> : undefined,
+    nextArrow: !props.noarrows ? <NextArrow /> : undefined,
+    autoplay: props.autoplay,
+    cssEase: "ease-out",
+    autoplaySpeed: 4000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: false,
+        },
+      },
+    ],
   };
 
   return (
-    <>
-      <Slider {...settings} className=''>
-        {/* Render children directly */}
-        {props.children}
-      </Slider>
-    </>
+    <Slider {...settings} className={props.className}>
+      {props.children}
+    </Slider>
   );
 };

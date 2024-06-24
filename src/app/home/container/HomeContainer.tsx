@@ -1,43 +1,50 @@
 import { useState } from "react";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import { HomeProejctData } from "~/data/Home/HomeProjectData";
+import { HomeTestimonialData } from "~/data/Home/HomeTestimonialData";
+import { HomePartnertData } from "~/data/Home/HomePartnerData";
 
 export const HomeContainer = () => {
-      const [openDrawer, setOpenDrawer] = useState(false);
-      const [openSideDrawer, setOpenSideDrawer] = useState(false);
+  const [openDrawer, setOpenDrawer] = useState(false);
+  const [openSideDrawer, setOpenSideDrawer] = useState(false);
 
-      const showDrawer = () => {
-        setOpenDrawer(true);
-      };
-
-      const onCloseDrawer = () => {
-        setOpenDrawer(false);
-        
+  const showDrawer = () => {
+    setOpenDrawer(true);
   };
-        const showSideDrawer = () => {
-          setOpenSideDrawer(true);
-        };
 
-        const onCloseSideDrawer = () => {
-          setOpenSideDrawer(false);
-        };
+  const onCloseDrawer = () => {
+    setOpenDrawer(false);
+  };
+  const showSideDrawer = () => {
+    setOpenSideDrawer(true);
+  };
+
+  const onCloseSideDrawer = () => {
+    setOpenSideDrawer(false);
+  };
   const theme = true;
-  const title = "Home"
-  
+  const title = "Home";
+
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
-    
     homeContentModuleProps: {
-      title: "HomeContentModule", heroProps: {
-      title
+      title: "HomeContentModule",
+      heroProps: {
+        title,
       },
-      projectModuleProp: {
+      projectModuleProps: {
         projectComponentProp: {
-          data:HomeProejctData
-        }
-        
-      }
+          data: HomeProejctData,
+        },
+      },
+      homeTestimonialProps: {
+        data: HomeTestimonialData,
+      },
+      homePartnersProps: {
+        title: "Over 32K+ software businesses growing with",
+        partners: HomePartnertData,
+      },
     },
-    
+
     homeHeaderModuleProps: {
       navBarProps: {
         theme,
@@ -56,7 +63,6 @@ export const HomeContainer = () => {
         onCloseSideDrawer,
       },
     },
-
   };
 
   return <HomeTemplate {...homeTemplateProps} />;
