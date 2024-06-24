@@ -111,15 +111,6 @@
   font-style: normal;
 }
 
-a:hover{
-  color: #ff4a3b;
-}
-.hover-primary:hover{
-  color: #ff4a3b;
-
-}
-
-
 h1, h2, h3, h4, h5, h6 {
     color: #1f1f1f;
     font-family: Italiana;
@@ -225,4 +216,16 @@ title-s3 h2 {
   color: #fff;
   display: flex;
   align-items: center;
+}
+.section-fluid {
+    padding: 120px 65px;
+}
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+
+.project-section .slick-slide:nth-child(2n) .project-item, .project-section-s4 .slick-slide:nth-child(2n) .project-item {
+    margin-top: 120px;
 }

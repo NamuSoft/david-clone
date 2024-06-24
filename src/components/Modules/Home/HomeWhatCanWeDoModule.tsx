@@ -1,8 +1,4 @@
-import { Drawer } from "antd";
-import { useState } from "react";
-import { DrawerAtom } from "~/components/Atoms/DrawerAtom/DrawerAtom";
-import { HeaderAtom } from "~/components/Atoms/HeaderAtom/HeaderAtom";
-import { NavBarAtom } from "~/components/Atoms/NavBarAtom/NavBarAtom";
+
 
 type Props = {
   title?: string;

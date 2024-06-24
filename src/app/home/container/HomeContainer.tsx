@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
+import { HomeProejctData } from "~/data/Home/HomeProjectData";
 
 export const HomeContainer = () => {
       const [openDrawer, setOpenDrawer] = useState(false);
@@ -28,7 +29,15 @@ export const HomeContainer = () => {
     homeContentModuleProps: {
       title: "HomeContentModule", heroProps: {
       title
-    } },
+      },
+      projectModuleProp: {
+        projectComponentProp: {
+          data:HomeProejctData
+        }
+        
+      }
+    },
+    
     homeHeaderModuleProps: {
       navBarProps: {
         theme,

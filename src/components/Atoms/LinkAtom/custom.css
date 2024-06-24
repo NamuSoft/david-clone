@@ -1,0 +1,14 @@
+a:hover{
+text-decoration: none;
+  color: #ff4a3b;
+}
+
+.a{
+   transition: all .2s;
+}
+
+
+.hover-primary:hover{
+  color: #ff4a3b;
+
+}

@@ -1,0 +1,21 @@
+.mask {
+  margin: 0 auto;
+  position: relative;
+  mask-size: 100% !important;
+  -webkit-mask-size: 100% !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-repeat: no-repeat !important;
+  mask-position: center center !important;
+  -webkit-mask-position: center center !important;
+  width: 100%;
+  height: 100%;
+}
+
+.mask img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rounded img{
+    border-radius: 50%;
+}

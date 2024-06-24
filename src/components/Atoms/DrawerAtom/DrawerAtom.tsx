@@ -11,7 +11,6 @@ type Props = {
 
 export const DrawerAtom = (props: Props) => {
   const [animationClass, setAnimationClass] = useState("");
-  const [inputAnimationClass, setInputAnimationClass] = useState("");
   
 
   useEffect(() => {
