@@ -217,3 +217,16 @@ section {
 .project-section .slick-slide:nth-child(2n) .project-item, .project-section-s4 .slick-slide:nth-child(2n) .project-item {
     margin-top: 120px;
 }
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+input[type="email" i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+}

@@ -11,6 +11,7 @@ import HomeMarqueeModule from "~/components/Modules/Home/HomeMarqueeModule";
 import { HomeFeaturesModule } from "~/components/Modules/Home/HomeFeaturesModule";
 import { HomeTeamModule } from "~/components/Modules/Home/HomeTeamModule";
 import { HomeVideoModule } from "~/components/Modules/Home/HomeVideoModule copy";
+import { FooterModule } from "~/components/Modules/Footer/FooterModule";
 
 type Props = {
   title: string;
@@ -22,6 +23,7 @@ type Props = {
   homeFeaturesModuleProps: React.ComponentProps<typeof HomeFeaturesModule>;
   homeTeamModuleProps: React.ComponentProps<typeof HomeTeamModule>;
   homeVideoModuleProps: React.ComponentProps<typeof HomeVideoModule>;
+  footerModuleProps: React.ComponentProps<typeof FooterModule>;
 };
 
 export const HomeTemplate = (props: Props) => {
@@ -46,10 +48,9 @@ export const HomeTemplate = (props: Props) => {
         <HomeVideoModule {...props.homeVideoModuleProps} />
       </Content>
 
-      {/*       
-     <Footer style={{ padding: 0, minHeight: 50 }}>
-    place for footer module
-    </Footer> */}
+      <Footer style={{ padding: 0, minHeight: 50 }}>
+        <FooterModule {...props.footerModuleProps} />
+      </Footer>
     </Layout>
   );
 };

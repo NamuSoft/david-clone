@@ -78,6 +78,12 @@ export const HomeContainer = () => {
         onCloseSideDrawer,
       },
     },
+    footerModuleProps: {
+      upperFooterProps: {
+        logo: "logo",
+      },
+      lowerFooterProps: {},
+    },
   };
 
   return <HomeTemplate {...homeTemplateProps} />;
