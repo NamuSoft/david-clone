@@ -10,6 +10,7 @@ import { HomeServiceModule } from "~/components/Modules/Home/HomeServiceModule";
 import HomeMarqueeModule from "~/components/Modules/Home/HomeMarqueeModule";
 import { HomeFeaturesModule } from "~/components/Modules/Home/HomeFeaturesModule";
 import { HomeTeamModule } from "~/components/Modules/Home/HomeTeamModule";
+import { HomeVideoModule } from "~/components/Modules/Home/HomeVideoModule copy";
 
 type Props = {
   title: string;
@@ -20,6 +21,7 @@ type Props = {
   homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
   homeFeaturesModuleProps: React.ComponentProps<typeof HomeFeaturesModule>;
   homeTeamModuleProps: React.ComponentProps<typeof HomeTeamModule>;
+  homeVideoModuleProps: React.ComponentProps<typeof HomeVideoModule>;
 };
 
 export const HomeTemplate = (props: Props) => {
@@ -31,7 +33,7 @@ export const HomeTemplate = (props: Props) => {
 
       <Content
         className='container  mx-auto max-w-full '
-        style={{ overflow: "auto" }}
+        style={{ overflow: "hidden" }}
       >
         <HomeHeroModule {...props.heroProps} />
         <HomeServiceModule />
@@ -41,6 +43,7 @@ export const HomeTemplate = (props: Props) => {
         <HomePartners {...props.homePartnersProps} />
         <HomeFeaturesModule {...props.homeFeaturesModuleProps} />
         <HomeTeamModule {...props.homeTeamModuleProps} />
+        <HomeVideoModule {...props.homeVideoModuleProps} />
       </Content>
 
       {/*       

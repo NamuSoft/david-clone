@@ -54,6 +54,12 @@ export const HomeContainer = () => {
         data: HomeTeamData,
       },
     },
+    homeVideoModuleProps: {
+      homeVideoProps: {
+        mask: "/images/video-mask.png",
+        img: "/images/home/video.jpg",
+      },
+    },
     homeHeaderModuleProps: {
       navBarProps: {
         theme,
