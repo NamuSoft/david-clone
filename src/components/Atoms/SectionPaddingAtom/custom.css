@@ -1,0 +1,13 @@
+
+
+.section-padding {
+    padding: 120px 0;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.section-padding {
+    display: block;
+    unicode-bidi: isolate;
+}
