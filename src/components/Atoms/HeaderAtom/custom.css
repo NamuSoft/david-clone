@@ -52,3 +52,44 @@
         margin-bottom: 10px;
     }
 }
+
+
+/* ------------------ */
+
+.page-title .breadcumb-wrap ol {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.page-title .breadcumb-wrap ol li {
+    display: inline-block;
+    padding: 0 15px;
+    color: #5c5c5c;
+    position: relative;
+    font-size: 20px;
+}
+
+@media (max-width: 575px) {
+    .page-title .breadcumb-wrap ol {
+        justify-content: center;
+    }
+}
+@media (max-width: 575px) {
+    .page-title .breadcumb-wrap ol li:first-child {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .page-title .breadcumb-wrap ol li {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+}
+@media (max-width: 767px) {
+    .page-title .breadcumb-wrap ol li {
+        font-size: 18px;
+    }
+}

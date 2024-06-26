@@ -24,7 +24,7 @@ export const AboutMeTemplate = (props: Props) => {
         <AboutMeContentModule {...props.aboutMeContentModuleProps} />
       </Content>
 
-      <Footer>
+      <Footer style={{ padding: 0 }}>
         <FooterModule {...props.footerModuleProps} />
       </Footer>
     </Layout>

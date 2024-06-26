@@ -25,7 +25,7 @@ export const HeaderAtom = (props: Props) => {
                     title: <a href={props.nav[2]}>{props.nav[1]}</a>,
                   },
                 ]}
-                className='space-mono-regular base-black text-lg '
+                className='space-mono-regular '
               />
             </div>
           </div>

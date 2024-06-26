@@ -4,6 +4,8 @@ import { NavData } from "~/data/NavData";
 import DrawerStore from "~/store/DrawerStore";
 import SliderStore from "~/store/SliderStore";
 import NavStore from "~/store/NavStore";
+import { AboutContentData } from "~/data/About/AboutContentData";
+import { AboutEventData } from "~/data/About/AboutEventData";
 
 export const AboutMeContainer = () => {
   const nav = useSnapshot(NavStore.state);
@@ -43,7 +45,13 @@ export const AboutMeContainer = () => {
         nav: ["Pages", "About Me", "#"],
       },
     },
-    aboutMeContentModuleProps: { title: "AboutMe contentModule" },
+    aboutMeContentModuleProps: {
+      title: "AboutMe contentModule",
+      aboutContentProps: AboutContentData,
+      evenProps: {
+        eventsData: AboutEventData,
+      },
+    },
     footerModuleProps: {
       upperFooterProps: {
         logo: "logo",

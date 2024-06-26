@@ -11,3 +11,20 @@
     display: block;
     unicode-bidi: isolate;
 }
+
+@media (max-width: 575px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-padding {
+        padding: 80px 0;
+    }
+}
+@media (max-width: 991px) {
+    .section-padding {
+        padding: 90px 0;
+    }
+}
