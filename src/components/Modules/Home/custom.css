@@ -499,3 +499,11 @@ img, svg {
 .service-section .service-wrap .ol:nth-child(4) .service-item {
     margin-top: 50px;
 }
+
+.marqq {
+
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 20s linear infinite;
+
+}

@@ -11,6 +11,7 @@ import NavStore from "~/store/NavStore";
 import { NavData } from "~/data/NavData";
 import { HomeHeroData } from "~/data/Home/HomeHeroData";
 import { HomeServiceData } from "~/data/Home/HomeServiceData";
+import { HomeMarqueeData } from "~/data/Home/HomeMarqueeData";
 
 export const HomeContainer = () => {
   const nav = useSnapshot(NavStore.state);
@@ -26,6 +27,7 @@ export const HomeContainer = () => {
         data: HomeProejctData,
       },
     },
+    homeMarqueeModuleProps: HomeMarqueeData,
     homeTestimonialProps: {
       data: HomeTestimonialData,
     },

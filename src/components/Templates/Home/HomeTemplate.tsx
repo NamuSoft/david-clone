@@ -24,6 +24,7 @@ type Props = {
   homeTeamModuleProps: React.ComponentProps<typeof HomeTeamModule>;
   homeVideoModuleProps: React.ComponentProps<typeof HomeVideoModule>;
   homeServiceModuleProps: React.ComponentProps<typeof HomeServiceModule>;
+  homeMarqueeModuleProps: React.ComponentProps<typeof HomeMarqueeModule>;
   footerModuleProps: React.ComponentProps<typeof FooterModule>;
 };
 
@@ -43,7 +44,7 @@ export const HomeTemplate = (props: Props) => {
       <Content>
         <HomeHeroModule {...props.heroProps} />
         <HomeServiceModule {...props.homeServiceModuleProps} />
-        <HomeMarqueeModule />
+        <HomeMarqueeModule {...props.homeMarqueeModuleProps} />
         <HomeProjectModule {...props.projectModuleProps} />
         <HomeTestimonial {...props.homeTestimonialProps} />
         <HomePartners {...props.homePartnersProps} />

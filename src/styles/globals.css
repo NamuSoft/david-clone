@@ -164,10 +164,3 @@ input[type="email" i] {
     padding-inline: 2px;
 }
 
-
-:where(.css-dev-only-do-not-override-1j1c6t0).ant-layout-header {
-    /* height: 64px;
-    padding: 0 50px;
-    color: rgba(0, 0, 0, 0.88); */
-    line-height:normal;
-}
