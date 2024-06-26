@@ -1,0 +1,54 @@
+.page-title {
+    background: #fdf9f6;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.page-title .breadcumb-wrap {
+    padding-bottom: 30px;
+}
+
+.page-title .breadcumb-wrap h2 {
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #1f1f1f;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 575px) {
+    .page-title {
+        min-height: 150px;
+
+
+    }
+    .page-title .breadcumb-wrap {
+        text-align: center;
+
+    }
+
+    .page-title .breadcumb-wrap ol {
+        justify-content: center;
+    }
+        .page-title .breadcumb-wrap h2 {
+        font-size: 30px;
+        line-height: 55px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .page-title {
+        min-height: 250px;
+    }
+    .page-title .breadcumb-wrap h2 {
+        font-size: 30px;
+        line-height: 55px;
+        margin-bottom: 10px;
+    }
+}

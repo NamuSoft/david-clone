@@ -38,7 +38,10 @@ export const AboutMeContainer = () => {
         },
         theme: slider.theme,
       },
-      headerProps: {},
+      headerProps: {
+        title: "About me",
+        nav: ["Pages", "About Me", "#"],
+      },
     },
     aboutMeContentModuleProps: { title: "AboutMe contentModule" },
     footerModuleProps: {

@@ -1,34 +1,36 @@
 import { Breadcrumb } from "antd";
+import { ContainerAtom } from "../ContainerAtom/ContainerAtom";
+import "./custom.css";
 
 type Props = {
   // Add props here
+  title: string;
+  nav: [string, string, string];
 };
 
 export const HeaderAtom = (props: Props) => {
   return (
-    <section className='page-title relative flex min-h-[300px] justify-center bg-[#fdf9f6]'>
-      <div className='container flex max-w-[960px] flex-col justify-end pb-[30px]'>
-        <div className='row'>
-          <div className='col col-xs-12'>
+    <section className='page-title '>
+      <ContainerAtom>
+        <div className='flex flex-wrap '>
+          <div className='relative max-w-full flex-1 flex-grow px-4 pl-4 pr-4 sm:w-full'>
             <div className='breadcumb-wrap'>
-              <h2 className='mb-[25px] text-[80px] font-normal leading-normal text-[#1f1f1f]'>
-                Home
-              </h2>
+              <h2 className=''>{props.title}</h2>
               <Breadcrumb
                 items={[
                   {
-                    title: "Home",
+                    title: props.nav[0],
                   },
                   {
-                    title: <a href=''>Application Center</a>,
+                    title: <a href={props.nav[2]}>{props.nav[1]}</a>,
                   },
                 ]}
-                className='space-mono-regular text-lg base-black '
+                className='space-mono-regular base-black text-lg '
               />
             </div>
           </div>
         </div>
-      </div>
+      </ContainerAtom>
     </section>
   );
 };
