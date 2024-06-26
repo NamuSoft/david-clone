@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Drawer, Input } from "antd";
 import { CloseOutlined, SearchOutlined } from "@ant-design/icons";
-
+import "./custom.css";
 type Props = {
   // title: string;
   openDrawer: boolean;
@@ -11,12 +11,10 @@ type Props = {
 
 export const DrawerAtom = (props: Props) => {
   const [animationClass, setAnimationClass] = useState("");
-  
 
   useEffect(() => {
     if (props.openDrawer) {
       setAnimationClass("animate-slideIn");
-      
     } else {
       setAnimationClass("animate-slideOut");
     }
@@ -38,7 +36,7 @@ export const DrawerAtom = (props: Props) => {
         onClose={props.onCloseDrawer}
         open={props.openDrawer}
         height='100vh'
-        className={`custom-drawer ${animationClass}`}
+        className={` ${props.openDrawer && "active"} header-search-form custom-drawer ${animationClass}`}
         style={{
           backgroundColor: "rgba(0, 0, 0, .8)",
         }}
@@ -56,7 +54,9 @@ export const DrawerAtom = (props: Props) => {
           </div>
         </div>
 
-        <div className='flex-coll mt-[350px] flex h-max justify-center align-middle'>
+        <div
+          className={` flex-coll form mt-[350px] flex h-max justify-center align-middle`}
+        >
           <Input
             placeholder='Search Here'
             allowClear

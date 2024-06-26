@@ -75,6 +75,7 @@ export const HomeContainer = () => {
           SliderStore.close();
         },
         theme: slider.theme,
+        projects: HomeProejctData,
       },
     },
     footerModuleProps: {

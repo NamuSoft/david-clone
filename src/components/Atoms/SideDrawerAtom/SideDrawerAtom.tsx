@@ -2,43 +2,19 @@ import React, { useEffect, useState } from "react";
 import { Drawer, Image, Input } from "antd";
 import { ArrowUpOutlined, CloseOutlined, HomeOutlined, MailOutlined, PhoneOutlined, SearchOutlined } from "@ant-design/icons";
 import SVGAtom from "../SVGAtom/SVGAtom";
+import { ResponsiveImgAtom } from "../ResponsiveImgAtom/ResponsiveImgAtom";
+import { type ProjectAtom } from "../ProjectAtom/ProjectAtom";
+import "./custom.css";
 
 type Props = {
   // title: string;
   openSideDrawer: boolean;
   onCloseSideDrawer: () => void;
   theme: boolean;
+  projects: React.ComponentProps<typeof ProjectAtom>[];
 };
 
-const projects = [
-  {
-    img: "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.974b50aa.jpg&w=750&q=75",
-    url: "#",
-  },
-  {
-    img: "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.55342e59.jpg&w=750&q=75",
-    url: "#",
-  },
-  {
-    img: "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-3.fd0560d6.jpg&w=750&q=75",
-    url: "#",
-  },
-  {
-    img: "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.ef302e71.jpg&w=750&q=75",
-    url: "#",
-  },
-  {
-    img: "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.55342e59.jpg&w=750&q=75",
-    url: "#",
-  },
-  {
-    img: "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.55342e59.jpg&w=750&q=75",
-    url: "#",
-  },
-];
 export const SideDrawerAtom = (props: Props) => {
-
-
   const SearchIcon = (
     <div className='left-auto right-[25px] top-[25px] bg-[#ff4a3b] p-1  text-white'>
       <ArrowUpOutlined
@@ -74,24 +50,25 @@ export const SideDrawerAtom = (props: Props) => {
           </div>
         </div>
 
-        <div className='flex h-max flex-col justify-center p-5 align-middle'>
-          <SVGAtom
-            iconName={props.theme ? "logo" : "logoBlack"}
+        <div className='flex h-max flex-col justify-center p-2 align-middle'>
+          <ResponsiveImgAtom
+            src='/svgs/logo.svg'
             width={195}
             height={62}
+            alt=''
             className='mb-[40px] mt-2 '
           />
           <h3 className='italiana-regular mb-6 text-[1.56rem] font-normal leading-8 text-[#fff]'>
             Our Latest Project
           </h3>
           <div className='mb-8  grid grid-cols-3 gap-2'>
-            {projects.map((item) => (
+            {props.projects.map((item, index) => (
               <Image
-                src={`https://unded-next.netlify.app${item.img}`}
+                src={item.image}
                 width={"100%"}
                 height={"75px"}
                 style={{ borderRadius: "5px", objectFit: "cover" }}
-                key={item.img}
+                key={index}
                 alt='img'
               />
             ))}
@@ -100,11 +77,11 @@ export const SideDrawerAtom = (props: Props) => {
             contact Us
           </h3>
           <div className='mb-6'>
-            <div className='space-mono-regular flex flex-row pb-3.5  align-baseline text-base text-[#fff]'>
+            <div className='space-mono-regular flex flex-row pb-3.5  align-baseline  text-[#fff]'>
               <MailOutlined
                 style={{ fontSize: "16px", alignContent: "flex-start" }}
               />
-              <span className='pl-5'>
+              <span>
                 {" "}
                 68D, Belsion Town 2365
                 <br />
@@ -112,22 +89,22 @@ export const SideDrawerAtom = (props: Props) => {
               </span>
             </div>
 
-            <div className='space-mono-regular flex flex-row pb-3.5  align-baseline text-base text-[#fff]'>
+            <div className='space-mono-regular flex flex-row pb-3.5  align-baseline  text-[#fff]'>
               <PhoneOutlined
                 style={{ fontSize: "16px", alignContent: "flex-start" }}
               />
-              <span className='pl-5'>
+              <span>
                 {" "}
                 + 1 (246) 333-0088
                 <br />+ 1 (246) 333-0088
               </span>
             </div>
 
-            <div className='space-mono-regular flex flex-row pb-3.5  align-baseline text-base text-[#fff]'>
+            <div className='space-mono-regular flex flex-row pb-3.5  align-baseline  text-[#fff]'>
               <HomeOutlined
                 style={{ fontSize: "16px", alignContent: "flex-start" }}
               />
-              <span className='pl-5'> alma.lawson@example.com</span>
+              <span> alma.lawson@example.com</span>
             </div>
           </div>
 
@@ -139,9 +116,9 @@ export const SideDrawerAtom = (props: Props) => {
             allowClear
             size='middle'
             suffix={SearchIcon}
-            className=' rounded-none p-0 w-[100%]'
+            className=' w-[100%] rounded-none p-0'
             styles={{
-              input: {  fontSize: "large", paddingLeft:"10px"},
+              input: { fontSize: "large", paddingLeft: "10px" },
             }}
           />
         </div>
