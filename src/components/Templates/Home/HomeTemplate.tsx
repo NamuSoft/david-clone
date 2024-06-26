@@ -28,8 +28,14 @@ type Props = {
 
 export const HomeTemplate = (props: Props) => {
   return (
-    <Layout style={{ height: "100%", backgroundColor: "#1f1f1f" }}>
-      <Header style={{ padding: 0 }}>
+    <Layout
+      style={{
+        height: "100%",
+        backgroundColor: "#1f1f1f",
+        position: "relative",
+      }}
+    >
+      <Header style={{ width: "100%", height: "100%", padding: 0 }}>
         <HomeHeaderModule {...props.homeHeaderModuleProps} />
       </Header>
 

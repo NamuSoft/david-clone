@@ -16,7 +16,7 @@ export const AboutMeContainer = () => {
     aboutMeHeaderModuleProps: {
       title: "",
       navBarProps: {
-        home: "",
+        home: "/",
         showDrawer() {
           DrawerStore.open();
         },
