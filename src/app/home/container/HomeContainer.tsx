@@ -10,6 +10,7 @@ import SliderStore from "~/store/SliderStore";
 import NavStore from "~/store/NavStore";
 import { NavData } from "~/data/NavData";
 import { HomeHeroData } from "~/data/Home/HomeHeroData";
+import { HomeServiceData } from "~/data/Home/HomeServiceData";
 
 export const HomeContainer = () => {
   const nav = useSnapshot(NavStore.state);
@@ -18,6 +19,7 @@ export const HomeContainer = () => {
 
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     title: "Home",
+    homeServiceModuleProps: HomeServiceData,
     heroProps: HomeHeroData,
     projectModuleProps: {
       projectComponentProp: {

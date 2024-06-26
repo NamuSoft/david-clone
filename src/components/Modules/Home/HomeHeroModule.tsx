@@ -13,7 +13,7 @@ type Props = {
 
 export const HomeHeroModule = (props: Props) => {
   return (
-    <div className='static-hero '>
+    <div className='static-hero mx-4'>
       <div className='static-hero-wrap'>
         <div className='container-fluid'>
           <RowAtom className=' items-center'>

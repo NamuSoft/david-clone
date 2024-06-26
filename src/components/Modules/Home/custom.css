@@ -172,12 +172,19 @@ img, svg {
 .video-section .arrow-shape img {
     animation: bounceLeftToRight 4s infinite;
 }
+/* Base styles for .static-hero */
+.static-hero {
+    padding: 0 70px 100px;
+}
+
+/* Styles for screens with max-width of 575px */
 @media (max-width: 575px) {
     .static-hero {
         padding: 0;
     }
 }
 
+/* Styles for screens with min-width of 576px and max-width of 991px */
 @media (min-width: 576px) and (max-width: 991px) {
     .static-hero {
         padding: 0 30px;
@@ -185,14 +192,13 @@ img, svg {
     }
 }
 
+/* Styles for screens with min-width of 992px */
 @media (min-width: 992px) {
     .static-hero {
         padding: 0 70px 100px;
     }
 }
-    .static-hero {
-        padding: 0 70px 100px;
-    }
+
 
 @media (max-width: 575px) {
     .static-hero .static-hero-wrap {
@@ -348,4 +354,148 @@ img, svg {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 10.8px;
+}
+
+/* Base styles */
+.service-section {
+    padding-bottom: 80px;
+}
+
+.section-padding {
+    padding: 120px 0;
+}
+
+/* Small screens (max-width: 575px) */
+@media (max-width: 575px) {
+    .service-section {
+        padding-bottom: 30px;
+    }
+    .section-padding {
+        padding: 60px 0;
+    }
+}
+
+/* Medium-small screens (min-width: 576px) and (max-width: 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .service-section {
+        padding-bottom: 30px;
+    }
+    .section-padding {
+        padding: 80px 0;
+    }
+}
+
+/* Medium screens (min-width: 768px) and (max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .service-section {
+        padding-bottom: 40px;
+    }
+    .section-padding {
+        padding: 90px 0;
+    }
+}
+
+
+/* Base styles for .service-section .service-left-text */
+.service-section .service-left-text {
+    padding-right: 75px;
+}
+
+/* Styles for screens with max-width of 991px */
+@media (max-width: 991px) {
+    .service-section .service-left-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+/* Base styles for .service-section .service-left-text span */
+.service-section .service-left-text>span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 8px;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Styles for screens with max-width of 575px */
+@media (max-width: 575px) {
+    .service-section .service-left-text>span {
+        letter-spacing: 3px;
+    }
+}
+
+
+/* Base styles for .service-section .service-left-text h2 */
+.service-section .service-left-text h2 {
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+/* Styles for screens with max-width of 1399px */
+@media (max-width: 1399px) {
+    .service-section .service-left-text h2 {
+        font-size: 65px;
+    }
+}
+
+/* Styles for screens with max-width of 1199px */
+@media (max-width: 1199px) {
+    .service-section .service-left-text h2 {
+        font-size: 60px;
+    }
+}
+
+/* Styles for screens with max-width of 575px */
+@media (max-width: 575px) {
+    .service-section .service-left-text h2 {
+        font-size: 40px;
+    }
+}
+
+.service-section .service-left-text p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: .64px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.service-section .service-left-text a.read-more {
+    display: inline-block;
+    text-align: center;
+    font-family: Italiana;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 157%;
+    letter-spacing: -.32px;
+    color: #fff;
+    position: relative;
+    padding-right: 25px;
+}
+
+
+.service-section .service-item h2 a {
+    color: white;
+}
+
+.service-section .service-item h2 a:hover {
+    color: white !important;
+}
+
+.service-section .service-wrap .ol:nth-child(2) .service-item {
+    margin-top: 20px;
+}
+.service-section .service-wrap .ol:nth-child(4) .service-item {
+    margin-top: 50px;
 }
