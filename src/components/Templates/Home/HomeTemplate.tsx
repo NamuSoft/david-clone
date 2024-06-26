@@ -39,10 +39,7 @@ export const HomeTemplate = (props: Props) => {
         <HomeHeaderModule {...props.homeHeaderModuleProps} />
       </Header>
 
-      <Content
-        className='container  mx-auto max-w-full '
-        style={{ overflow: "hidden" }}
-      >
+      <Content>
         <HomeHeroModule {...props.heroProps} />
         <HomeServiceModule />
         <HomeMarqueeModule />

@@ -172,3 +172,180 @@ img, svg {
 .video-section .arrow-shape img {
     animation: bounceLeftToRight 4s infinite;
 }
+@media (max-width: 575px) {
+    .static-hero {
+        padding: 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .static-hero {
+        padding: 0 30px;
+        /* background: green; */
+    }
+}
+
+@media (min-width: 992px) {
+    .static-hero {
+        padding: 0 70px 100px;
+    }
+}
+    .static-hero {
+        padding: 0 70px 100px;
+    }
+
+@media (max-width: 575px) {
+    .static-hero .static-hero-wrap {
+        padding: 50px 20px 110px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1199px) {
+    .static-hero .static-hero-wrap {
+        padding: 80px 40px 110px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .static-hero .static-hero-wrap {
+        padding: 80px 70px 90px;
+    }
+}
+
+@media (min-width: 1501px) {
+    .static-hero .static-hero-wrap {
+        padding: 80px 100px 90px;
+    }
+}
+
+
+.static-hero .static-hero-wrap {
+    background: #ff4a3b;
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .static-hero .static-hero-text {
+        text-align: center;
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 991px) {
+
+.static-hero .static-hero-text {
+    padding-top: 60px;
+}
+}
+
+
+
+@media (max-width: 575px) {
+    .static-hero .static-hero-text h2 {
+        font-size: 44px;
+        line-height: 44px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1199px) {
+    .static-hero .static-hero-text h2 {
+        font-size: 70px;
+        line-height: 70px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .static-hero .static-hero-text h2 {
+        font-size: 100px;
+        line-height: 100px;
+    }
+}
+
+@media (min-width: 1501px) {
+    .static-hero .static-hero-text h2 {
+        font-size: 130px;
+        font-style: normal;
+        line-height: 130px;
+    }
+}
+
+.static-hero .static-hero-text h2 {
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.static-hero .static-hero-text p {
+    max-width: 615px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.64px;
+    display: flex;
+    color: #fff;
+}
+
+@media (max-width: 575px) {
+    .static-hero .static-hero-text p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .static-hero .static-hero-text p {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .fancy-btn {
+        margin: 30px auto 0;
+    }
+}
+
+.fancy-btn {
+    color: #fff;
+    text-align: center;
+    font-family: Italiana;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 157%;
+    letter-spacing: -.32px;
+    width: 126.921px;
+    height: 134.486px;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: morphing 10s infinite;
+    /* margin-top: 30px; */
+    background: none;
+    align-items: center;
+}
+
+.static-hero .static-hero-text .sub-title span {
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 10.8px;
+}
