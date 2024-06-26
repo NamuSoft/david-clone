@@ -1,0 +1,100 @@
+/* DropdownNavItem styles */
+.dropdown-nav {
+    color: #1f1f1f;
+    position: relative; /* Ensure the parent is positioned relative for absolute child */
+}
+
+@media (max-width: 1199px) {
+    .header-area .main-menu .dropdown-nav {
+        padding: 35px 12px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .header-area .main-menu .dropdown-nav {
+        padding: 35px 18px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .header-area .main-menu .dropdown-nav {
+        font-size: 20px;
+        padding: 35px 40px;
+        display: block;
+        font-weight: 400;
+    }
+}
+
+.dropdown-nav > a::before {
+    content: "_";
+}
+
+/* Dropdown menu styling */
+.dropdown-nav ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 50;
+    display: none; /* Hide by default */
+    /* background: #000; Background color for the dropdown */
+}
+
+.dropdown-nav:hover ul {
+    display: block; /* Show on hover */
+}
+
+.dropdown-nav ul li {
+    list-style: none;
+}
+
+.dropdown-nav ul a {
+    display: block;
+    padding: 10px 15px;
+    /* color: #fff; White text color for the dropdown items */
+    text-decoration: none;
+}
+
+.dropdown-nav ul a:hover {
+    /* background: #444; Darker background on hover */
+}
+
+/* Align items center globally */
+ul li {
+    display: flex;
+    align-items: center;
+}
+
+
+/* ---------- */
+@media screen and (min-width: 992px) {
+    .header-area .main-menu ul>li:hover>.sub-menu {
+        top: 100%;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header-area .main-menu  .sub-menu {
+        box-shadow: 0 2px 20px 0 rgba(62, 65, 159, .09);
+        width: 230px;
+        position: absolute;
+        padding: 20px 0;
+        left: 0;
+        z-index: 10;
+        /* transition: all .3s; */
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header-area .main-menu .sub-menu a {
+        font-size: 16px;
+        font-size: calc-rem-value(16);
+        display: block;
+        padding: 12px 20px;
+        /* color: #fff; */
+        position: relative;
+        overflow: hidden;
+    }
+}

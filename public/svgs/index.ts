@@ -4,4 +4,4 @@
 // export { default as arrowLeft } from "./arrowLeft.svg";
 // export { default as outLink } from "./outLink.svg";
 export { default as logo } from "./logo.svg";
-export { default as logoBlack } from "./logo-black.svg";
+export { default as logoBlack } from "./logoBlack.svg";

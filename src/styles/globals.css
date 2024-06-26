@@ -104,6 +104,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Italiana";
     font-weight: 400;
 }
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 .base-black{
   color: #1f1f1f;
 }
@@ -229,4 +232,12 @@ button, input, optgroup, select, textarea {
 input[type="email" i] {
     padding-block: 1px;
     padding-inline: 2px;
+}
+
+
+:where(.css-dev-only-do-not-override-1j1c6t0).ant-layout-header {
+    /* height: 64px;
+    padding: 0 50px;
+    color: rgba(0, 0, 0, 0.88); */
+    line-height:normal;
 }
