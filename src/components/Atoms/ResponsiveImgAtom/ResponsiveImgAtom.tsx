@@ -4,25 +4,26 @@ import "./custom.css";
 
 type Props = {
   src: string | StaticImport;
-  width?: number | `${number}` | undefined;
-  height?: number | `${number}` | undefined;
+  width: number;
+  height: number;
   className?: string | undefined;
   alt: string;
 };
 
 export const ResponsiveImgAtom = (props: Props) => {
   return (
-    <div
-      className={`relativee ${props.className}`}
-      style={{ width: props.width, height: props.height }}
-    >
-      <Image
-        src={props.src}
-        layout='fill'
-        alt={props.alt}
-        className='object-cover'
-        loading='lazy'
-      />
-    </div>
+    <Image
+      className={`object-contain ${props.className}`}
+      src={props.src}
+      layout='responsive'
+      width={props.width}
+      height={props.height}
+      alt={props.alt}
+      style={{
+        maxWidth: props.width,
+        maxHeight: props.height,
+      }}
+      loading='lazy'
+    />
   );
 };
