@@ -45,7 +45,7 @@ export const HomeTemplate = (props: Props) => {
         <HomeHeaderModule {...props.homeHeaderModuleProps} />
       </Header>
 
-      <Content>
+      <Content style={{ overflow: "hidden" }}>
         <HomeHeroModule {...props.heroProps} />
         <HomeServiceModule {...props.homeServiceModuleProps} />
         <HomeMarqueeModule {...props.homeMarqueeModuleProps} />
