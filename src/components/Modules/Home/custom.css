@@ -30,9 +30,6 @@
     
 }
 
-a, a:hover {
-    text-decoration: none;
-}
 
 a {
     transition: all .2s;
@@ -52,9 +49,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     line-height: 1.2;
 }
-*, :after, :before {
-    box-sizing: border-box;
-}
+
 
 h3 {
     display: block;
@@ -507,3 +502,6 @@ img, svg {
     animation: marquee 20s linear infinite;
 
 }
+
+
+

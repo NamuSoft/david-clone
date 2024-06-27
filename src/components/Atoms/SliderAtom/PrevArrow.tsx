@@ -12,15 +12,16 @@ const PrevArrow = (props: Props) => {
     <div
       className={props.className}
       style={{
-          ...props.style,
-          display:'block',
-          content: `url('/images/left-arrow.png')`,
-          left: '46%',
-          zIndex: 10,
-    transition: "all .3s",
-    top: 'auto',
-    bottom: '-70px',
-        
+        ...props.style,
+        display: "block",
+        content: `url('/images/left-arrow.png')`,
+        left: "40%",
+        zIndex: 10,
+        transition: "all .3s",
+        top: "auto",
+        bottom: "-100px",
+        width: "100px",
+        height: "50px",
       }}
       onClick={props.onClick}
     />

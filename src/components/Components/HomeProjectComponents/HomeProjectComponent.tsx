@@ -1,7 +1,10 @@
 import { SlideUpAnimationAtom } from "~/components/Atoms/SlideUpAnimationAtom/SlideUpAnimationAtom";
 import { ProjectAtom } from "../../Atoms/ProjectAtom/ProjectAtom";
 import "./custom.css"
-import { SliderAtom } from "~/components/Atoms/SliderAtom/SliderAtom";
+import {
+  type Break,
+  SliderAtom,
+} from "~/components/Atoms/SliderAtom/SliderAtom";
 type Props = {
   data: React.ComponentProps<typeof ProjectAtom>[];
 };
@@ -9,14 +12,38 @@ type Props = {
 export const HomeProjectComponent = ({ data }: Props) => {
   // Map data to ProjectAtom components
   const projectComponents = data.map((item, index) => (
-    <SlideUpAnimationAtom key={index}>
-      <ProjectAtom {...item} className='project-item item' />
+    <SlideUpAnimationAtom key={index} className=''>
+      <ProjectAtom
+        {...item}
+        className='px-30 max-auto w-[335px] justify-self-center  outline-none'
+      />
     </SlideUpAnimationAtom>
   ));
-
+  const responsive: Break = [
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ];
   return (
-    <SliderAtom>
-      {/* Render mapped components directly */}
+    <SliderAtom
+      responsive={responsive}
+      className='item projectItem items-center'
+    >
       {projectComponents}
     </SliderAtom>
   );
