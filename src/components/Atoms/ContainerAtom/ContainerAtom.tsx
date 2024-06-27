@@ -1,10 +1,13 @@
-import { type ReactNode } from "react";
-import styles from "./custom.module.css"
+import { PropsWithChildren, type ReactNode } from "react";
+import styles from "./custom.module.css";
 type Props = {
-  children: ReactNode;
-  className?: string; 
+  className?: string;
 };
 
-export const ContainerAtom = (props: Props) => {
-  return (<div className={`${props.className} ${styles.container}`}>{props.children} </div>);
+export const ContainerAtom = (props: PropsWithChildren<Props>) => {
+  return (
+    <div className={`${props.className} ${styles.container}`}>
+      {props.children}{" "}
+    </div>
+  );
 };

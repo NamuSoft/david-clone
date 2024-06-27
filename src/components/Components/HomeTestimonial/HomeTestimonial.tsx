@@ -14,9 +14,7 @@ export const HomeTestimonial = (props: Props) => {
   ));
 
   return (
-    <div
-      className={`${styles.relative} z-[1] block p-[120px] pt-[80px] lg:p-[90px]`}
-    >
+    <>
       <div className={styles.container}>
         <CarouselAtom>{items}</CarouselAtom>
       </div>
@@ -31,6 +29,6 @@ export const HomeTestimonial = (props: Props) => {
           style={{ color: "transparent" }}
         />
       </div>
-    </div>
+    </>
   );
 };

@@ -12,12 +12,15 @@ import { HomeFeaturesModule } from "~/components/Modules/Home/HomeFeaturesModule
 import { HomeTeamModule } from "~/components/Modules/Home/HomeTeamModule";
 import { HomeVideoModule } from "~/components/Modules/Home/HomeVideoModule copy";
 import { FooterModule } from "~/components/Modules/Footer/FooterModule";
+import { HomeTestimonialModule } from "~/components/Modules/Home/HomeTestimonialModule";
 
 type Props = {
   title: string;
   heroProps: React.ComponentProps<typeof HomeHeroModule>;
   projectModuleProps: React.ComponentProps<typeof HomeProjectModule>;
-  homeTestimonialProps: React.ComponentProps<typeof HomeTestimonial>;
+  homeTestimonialModuleProps: React.ComponentProps<
+    typeof HomeTestimonialModule
+  >;
   homePartnersProps: React.ComponentProps<typeof HomePartners>;
   homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
   homeFeaturesModuleProps: React.ComponentProps<typeof HomeFeaturesModule>;
@@ -46,7 +49,7 @@ export const HomeTemplate = (props: Props) => {
         <HomeServiceModule {...props.homeServiceModuleProps} />
         <HomeMarqueeModule {...props.homeMarqueeModuleProps} />
         <HomeProjectModule {...props.projectModuleProps} />
-        <HomeTestimonial {...props.homeTestimonialProps} />
+        <HomeTestimonialModule {...props.homeTestimonialModuleProps} />
         <HomePartners {...props.homePartnersProps} />
         <HomeFeaturesModule {...props.homeFeaturesModuleProps} />
         <HomeTeamModule {...props.homeTeamModuleProps} />

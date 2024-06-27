@@ -28,8 +28,10 @@ export const HomeContainer = () => {
       },
     },
     homeMarqueeModuleProps: HomeMarqueeData,
-    homeTestimonialProps: {
-      data: HomeTestimonialData,
+    homeTestimonialModuleProps: {
+      homeTestimonialProps: {
+        data: HomeTestimonialData,
+      },
     },
     homePartnersProps: {
       title: "Over 32K+ software businesses growing with",
