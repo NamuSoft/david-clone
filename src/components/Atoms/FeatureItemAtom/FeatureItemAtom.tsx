@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion, useAnimation, AnimationControls } from "framer-motion";
 import { useState } from "react";
 import { MaskedImgAtom } from "../MaskedImgAtom/MaskedImgAtom";
-import Image from "next/image";
+import { ResponsiveImgAtom } from "../ResponsiveImgAtom/ResponsiveImgAtom";
 
 type Props = {
   url: string;
@@ -41,7 +41,7 @@ export const FeatureItemAtom = (props: Props) => {
   };
 
   return (
-    <div className='relative flex features-items mx-auto w-full  justify-self-center justify-center flex-1'>
+    <div className='features-items relative mx-auto flex w-full  flex-1 justify-center justify-self-center'>
       <Link
         href={props.url}
         className='features-item  italiana-regular'
@@ -58,12 +58,16 @@ export const FeatureItemAtom = (props: Props) => {
             position: "absolute",
             top: 0,
             left: 0,
-
           }}
           className='features-masking'
         >
           <MaskedImgAtom mask={props.mask}>
-            <Image src={props.image} alt='' width={150} height={150} />
+            <ResponsiveImgAtom
+              src={props.image}
+              alt=''
+              width={150}
+              height={150}
+            />
           </MaskedImgAtom>
         </motion.div>
       </Link>
