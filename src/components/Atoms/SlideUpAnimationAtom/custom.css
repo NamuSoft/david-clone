@@ -1,0 +1,21 @@
+
+@keyframes slide-up {
+    0% {
+    transform: translate3d(0px, 100%, 0px);
+    visibility: visible;
+}
+
+100% {
+    transform: translate3d(0px, 0px, 0px);
+}
+}
+
+.item{
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-name: slide-up;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+

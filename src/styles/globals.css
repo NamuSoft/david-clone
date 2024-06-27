@@ -1,3 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Animation */
+@keyframes animation-gkgm2m {
+  0% {
+    transform: translate3d(0px, 100%, 0px);
+    visibility: visible;
+}
+
+100% {
+    transform: translate3d(0px, 0px, 0px);
+}
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+}
+
+100% {
+    transform: rotate(1turn);
+}
+  
+}
+
+@keyframes morphing {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+25% {
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+}
+50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+}
+75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+}
+
+
+}
+
+@keyframes marquee {
+    0% {
+    transform: translateX(0);
+}
+
+    100% {
+    transform: translateX(-50%);
+}
+}
+.css-z1mjt4 {
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    /* animation-delay: 0ms; */
+    animation-name: animation-gkgm2m;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+.rotate {
+  animation: circle 15s linear infinite;
+}
+
+/* Masks */
+ .right-image .right-image-mask {
+    mask-image: url(/images/mask.png);
+    -webkit-mask-image: url(/images/mask.png);
+    mask-size: 100% !important;
+    -webkit-mask-size: 100% !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-repeat: no-repeat !important;
+    max-width: 380px;
+}
+
+/* Fonts */
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.italiana-regular {
+  font-family: "Italiana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1f1f1f;
+    font-family: Italiana;
+    font-weight: 400;
+}
+.base-black{
+  color: #1f1f1f;
+}
+.bg-base-black{
+  background-color: #1f1f1f;
+}
+search-form .form-group input[type=text] {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 50px;
+    color: #000;
+    height: 70px;
+    width: 100%;
+    padding: 10px 30px;
+    background: #fff;
+    transition: all .5s ease;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: 50%;
+    border: 0;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.page-title .breadcumb-wrap ol {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-style-3 .main-menu ul>li>a, .header-style-4 .main-menu ul>li>a {
+    color: #1f1f1f;
+}
+
+.underscore::before {
+  content: "_";
+}
+
+title-s3 h2 {
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
+}
+/* .ant-input */
+
+
+
+.sub-title{
+  letter-spacing: 10.8px;
+}
+
+.fancy-btn {
+    color: #fff;
+    text-align: center;
+    /* font-family: Italiana; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 157%;
+    letter-spacing: -.32px;
+    width: 126.921px;
+    height: 134.486px;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: morphing 10s infinite;
+    margin-top: 30px;
+    background: none;
+    align-items: center;
+}
+.marquee{
+    animation: marquee 200s linear infinite;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+.marquee-content {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+.h1Marquee{
+  font-size: 150px;
+  white-space: nowrap;
+  margin-bottom: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.section-fluid {
+    padding: 120px 65px;
+}
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+
+.project-section .slick-slide:nth-child(2n) .project-item, .project-section-s4 .slick-slide:nth-child(2n) .project-item {
+    margin-top: 120px;
+}
