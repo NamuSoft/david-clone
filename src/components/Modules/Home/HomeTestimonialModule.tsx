@@ -1,7 +1,6 @@
 import { SectionPaddingAtom } from "~/components/Atoms/SectionPaddingAtom/SectionPaddingAtom";
 import "./custom.css";
 import { ContainerAtom } from "~/components/Atoms/ContainerAtom/ContainerAtom";
-import { TestimonialAtom } from "~/components/Atoms/TestimonialAtom/TestimonialAtom";
 import { HomeTestimonial } from "~/components/Components/HomeTestimonial/HomeTestimonial";
 
 type Props = {

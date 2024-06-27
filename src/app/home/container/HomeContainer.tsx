@@ -33,9 +33,11 @@ export const HomeContainer = () => {
         data: HomeTestimonialData,
       },
     },
-    homePartnersProps: {
-      title: "Over 32K+ software businesses growing with",
-      partners: HomePartnertData,
+    homePartnersModuleProps: {
+      homePartnersProps: {
+        title: "Over 32K+ software businesses growing with",
+        partners: HomePartnertData,
+      },
     },
     homeFeaturesModuleProps: {
       homeFeaturesProps: {

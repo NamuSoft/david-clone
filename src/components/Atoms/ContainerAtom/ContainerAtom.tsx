@@ -1,4 +1,4 @@
-import { PropsWithChildren, type ReactNode } from "react";
+import { type PropsWithChildren } from "react";
 import styles from "./custom.module.css";
 type Props = {
   className?: string;
