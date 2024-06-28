@@ -495,4 +495,16 @@ img, svg {
 }
 
 
+.custom-drawer .space-mono-regular span {
+    position: relative;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: normal;
+}
+
+.custom-drawer{
+    max-height: 100vh;
+}
+
 

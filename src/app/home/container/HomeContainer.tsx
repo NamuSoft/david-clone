@@ -11,6 +11,7 @@ import { NavData } from "~/data/NavData";
 import { HomeHeroData } from "~/data/Home/HomeHeroData";
 import { HomeServiceData } from "~/data/Home/HomeServiceData";
 import { HomeMarqueeData } from "~/data/Home/HomeMarqueeData";
+import { HomeContactData } from "~/data/Home/HomeContactData";
 
 export const HomeContainer = () => {
   const drawer = useSnapshot(DrawerStore.state);
@@ -19,6 +20,20 @@ export const HomeContainer = () => {
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     homeServiceModuleProps: HomeServiceData,
     heroProps: HomeHeroData,
+    homeSideDrawerModuleProps: {
+      sideDrawerProps: {
+        openSideDrawer: slider.open,
+        onCloseSideDrawer() {
+          SliderStore.close();
+        },
+      },
+      onCloseSideDrawer() {
+        SliderStore.close();
+      },
+      theme: slider.theme,
+      projects: HomeProejctData,
+      contacts: HomeContactData,
+    },
     projectModuleProps: {
       projectComponentProp: {
         data: HomeProejctData,
@@ -65,20 +80,17 @@ export const HomeContainer = () => {
         theme: true,
         // theme: nav.theme,
       },
+    },
+    drawerModuleProps: {
+      openDrawer: drawer.open,
+      onCloseDrawer() {
+        DrawerStore.close();
+      },
       drawerProps: {
         openDrawer: drawer.open,
-        theme: drawer.theme,
         onCloseDrawer() {
           DrawerStore.close();
         },
-      },
-      sideDrawerProps: {
-        openSideDrawer: slider.open,
-        onCloseSideDrawer() {
-          SliderStore.close();
-        },
-        theme: slider.theme,
-        projects: HomeProejctData,
       },
     },
     footerModuleProps: {

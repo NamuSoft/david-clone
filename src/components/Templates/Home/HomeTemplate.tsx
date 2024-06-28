@@ -11,6 +11,8 @@ import { HomeVideoModule } from "~/components/Modules/Home/HomeVideoModule copy"
 import { FooterModule } from "~/components/Modules/Footer/FooterModule";
 import { HomeTestimonialModule } from "~/components/Modules/Home/HomeTestimonialModule";
 import { HomePartnersModule } from "~/components/Modules/Home/HomePartnersModule";
+import { HomeSideDrawerModule } from "~/components/Modules/Home/HomeSideDrawerModule";
+import { DrawerModule } from "~/components/Modules/Drawer/DrawerModule";
 
 type Props = {
   heroProps: React.ComponentProps<typeof HomeHeroModule>;
@@ -20,12 +22,14 @@ type Props = {
   >;
   homePartnersModuleProps: React.ComponentProps<typeof HomePartnersModule>;
   homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
+  homeSideDrawerModuleProps: React.ComponentProps<typeof HomeSideDrawerModule>;
   homeFeaturesModuleProps: React.ComponentProps<typeof HomeFeaturesModule>;
   homeTeamModuleProps: React.ComponentProps<typeof HomeTeamModule>;
   homeVideoModuleProps: React.ComponentProps<typeof HomeVideoModule>;
   homeServiceModuleProps: React.ComponentProps<typeof HomeServiceModule>;
   homeMarqueeModuleProps: React.ComponentProps<typeof HomeMarqueeModule>;
   footerModuleProps: React.ComponentProps<typeof FooterModule>;
+  drawerModuleProps: React.ComponentProps<typeof DrawerModule>;
 };
 
 export const HomeTemplate = (props: Props) => {
@@ -39,6 +43,8 @@ export const HomeTemplate = (props: Props) => {
     >
       <Header style={{ width: "100%", height: "100%", padding: 0 }}>
         <HomeHeaderModule {...props.homeHeaderModuleProps} />
+        <HomeSideDrawerModule {...props.homeSideDrawerModuleProps} />
+        <DrawerModule {...props.drawerModuleProps} />
       </Header>
 
       <Content style={{ overflow: "hidden" }}>
