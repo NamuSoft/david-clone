@@ -3,19 +3,16 @@ import { AboutMeTemplate } from "~/components/Templates/AboutMe/AboutMeTemplate"
 import { NavData } from "~/data/NavData";
 import DrawerStore from "~/store/DrawerStore";
 import SliderStore from "~/store/SliderStore";
-import NavStore from "~/store/NavStore";
 import { AboutContentData } from "~/data/About/AboutContentData";
 import { AboutEventData } from "~/data/About/AboutEventData";
 import { AboutServiceData } from "~/data/About/AboutServiceData";
 import { HomeProejctData } from "~/data/Home/HomeProjectData";
 
 export const AboutMeContainer = () => {
-  const nav = useSnapshot(NavStore.state);
   const drawer = useSnapshot(DrawerStore.state);
   const slider = useSnapshot(SliderStore.state);
   const aboutmeTemplateProps: React.ComponentProps<typeof AboutMeTemplate> = {
     aboutMeHeaderModuleProps: {
-      title: "",
       navBarProps: {
         home: "/",
         showDrawer() {

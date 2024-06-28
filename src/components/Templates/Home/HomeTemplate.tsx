@@ -1,9 +1,6 @@
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import { HomeHeaderModule } from "~/components/Modules/Home/HomeHeaderModule";
-import { HomeTestimonial } from "~/components/Components/HomeTestimonial/HomeTestimonial";
-import { HomePartners } from "~/components/Components/HomePartners/HomePartners";
-import { HomeFeatures } from "~/components/Components/HomeFeatures/HomeFeatures";
 import { HomeHeroModule } from "~/components/Modules/Home/HomeHeroModule";
 import { HomeProjectModule } from "~/components/Modules/Home/HomeProjectModule";
 import { HomeServiceModule } from "~/components/Modules/Home/HomeServiceModule";
@@ -16,7 +13,6 @@ import { HomeTestimonialModule } from "~/components/Modules/Home/HomeTestimonial
 import { HomePartnersModule } from "~/components/Modules/Home/HomePartnersModule";
 
 type Props = {
-  title: string;
   heroProps: React.ComponentProps<typeof HomeHeroModule>;
   projectModuleProps: React.ComponentProps<typeof HomeProjectModule>;
   homeTestimonialModuleProps: React.ComponentProps<

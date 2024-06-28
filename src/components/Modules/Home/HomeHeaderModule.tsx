@@ -5,7 +5,6 @@ import { SideDrawerAtom } from "~/components/Atoms/SideDrawerAtom/SideDrawerAtom
 import { NavBarAtom } from "~/components/Atoms/NavBarAtom/NavBarAtom";
 
 type Props = {
-  title: string;
   navBarProps: React.ComponentProps<typeof NavBarAtom>;
   drawerProps: React.ComponentProps<typeof DrawerAtom>;
   sideDrawerProps: React.ComponentProps<typeof SideDrawerAtom>;

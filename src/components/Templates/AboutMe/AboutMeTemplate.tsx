@@ -1,5 +1,4 @@
 import { AboutMeHeaderModule } from "~/components/Modules/AboutMe/AboutMeHeaderModule";
-import { AboutMeFooterModule } from "~/components/Modules/AboutMe/AboutMeFooterModule";
 import { AboutMeContentModule } from "~/components/Modules/AboutMe/AboutMeContentModule";
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
@@ -7,7 +6,6 @@ import { FooterModule } from "~/components/Modules/Footer/FooterModule";
 
 type Props = {
   aboutMeHeaderModuleProps: React.ComponentProps<typeof AboutMeHeaderModule>;
-  // aboutMeFooterModuleProps: React.ComponentProps<typeof AboutMeFooterModule>;
   aboutMeContentModuleProps: React.ComponentProps<typeof AboutMeContentModule>;
   footerModuleProps: React.ComponentProps<typeof FooterModule>;
 };

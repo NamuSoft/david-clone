@@ -7,19 +7,16 @@ import { HomeTeamData } from "~/data/Home/HomeTeamData";
 import { useSnapshot } from "valtio";
 import DrawerStore from "~/store/DrawerStore";
 import SliderStore from "~/store/SliderStore";
-import NavStore from "~/store/NavStore";
 import { NavData } from "~/data/NavData";
 import { HomeHeroData } from "~/data/Home/HomeHeroData";
 import { HomeServiceData } from "~/data/Home/HomeServiceData";
 import { HomeMarqueeData } from "~/data/Home/HomeMarqueeData";
 
 export const HomeContainer = () => {
-  const nav = useSnapshot(NavStore.state);
   const drawer = useSnapshot(DrawerStore.state);
   const slider = useSnapshot(SliderStore.state);
 
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
-    title: "Home",
     homeServiceModuleProps: HomeServiceData,
     heroProps: HomeHeroData,
     projectModuleProps: {
@@ -56,7 +53,6 @@ export const HomeContainer = () => {
       },
     },
     homeHeaderModuleProps: {
-      title: "",
       navBarProps: {
         home: "/",
         showDrawer() {

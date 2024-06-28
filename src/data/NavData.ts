@@ -3,7 +3,7 @@ import type { NavItem } from "~/components/Atoms/NavBarAtom/NavBarAtom";
 export const NavData: NavItem[] = [
   {
     name: "home",
-    url: "/Home",
+    url: "/home",
   },
   {
     name: "Pages",
