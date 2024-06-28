@@ -1,4 +1,4 @@
-import { PropsWithChildren, type ReactNode } from "react";
+import type { PropsWithChildren } from "react";
 import "./custom.css";
 
 type Props = {

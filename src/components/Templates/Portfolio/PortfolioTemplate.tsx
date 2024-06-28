@@ -1,7 +1,7 @@
 import { PortfolioPortfolioModule } from "~/components/Modules/Portfolio/PortfolioPortfolioModule";
 import { PortfolioNewsletterModule } from "~/components/Modules/Portfolio/PortfolioNewsletterModule";
   import { Layout } from "antd";
-import { Content, Footer, Header } from "antd/es/layout/layout";
+import { Content } from "antd/es/layout/layout";
 
 type Props = {
   portfolioPortfolioModuleProps: React.ComponentProps<typeof PortfolioPortfolioModule>;

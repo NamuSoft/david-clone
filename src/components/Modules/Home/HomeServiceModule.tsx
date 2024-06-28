@@ -1,4 +1,4 @@
-import { ArrowDownOutlined, ArrowRightOutlined } from "@ant-design/icons";
+import { ArrowRightOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import React from "react";
 import { ContainerAtom } from "~/components/Atoms/ContainerAtom/ContainerAtom";

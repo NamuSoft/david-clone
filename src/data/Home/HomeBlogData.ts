@@ -1,4 +1,4 @@
-import { HomeBlogModule } from "~/components/Modules/Home/HomeBlogModule";
+import { type HomeBlogModule } from "~/components/Modules/Home/HomeBlogModule";
 
 export const HomeBlogData: React.ComponentProps<typeof HomeBlogModule> = {
   title: "My Latest Articles",

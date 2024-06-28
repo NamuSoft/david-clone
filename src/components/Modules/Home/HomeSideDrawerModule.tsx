@@ -1,11 +1,9 @@
 import { SideDrawerAtom } from "~/components/Atoms/SideDrawerAtom/SideDrawerAtom";
 import { ArrowUpOutlined, CloseOutlined } from "@ant-design/icons";
 import { Image, Input } from "antd";
-
 import "./custom.css";
 import { ResponsiveImgAtom } from "~/components/Atoms/ResponsiveImgAtom/ResponsiveImgAtom";
 import { type ProjectAtom } from "~/components/Atoms/ProjectAtom/ProjectAtom";
-import { ReactNode } from "react";
 
 export type Contacts = {
   Icon: React.ElementType;

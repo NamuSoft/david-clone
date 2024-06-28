@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { SectionPaddingAtom } from "~/components/Atoms/SectionPaddingAtom/SectionPaddingAtom";
 import "./custom.css";
 import { HomeTeam } from "~/components/Components/HomeTeam/HomeTeam";

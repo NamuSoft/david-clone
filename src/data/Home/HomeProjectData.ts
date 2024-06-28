@@ -1,4 +1,3 @@
-// import type React from "react";
 import type { ProjectAtom } from "~/components/Atoms/ProjectAtom/ProjectAtom";
 
 export const HomeProejctData: React.ComponentProps<typeof ProjectAtom>[] = [

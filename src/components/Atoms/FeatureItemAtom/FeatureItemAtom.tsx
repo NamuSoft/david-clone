@@ -1,7 +1,6 @@
 import "./custom.css";
 import Link from "next/link";
-import { motion, useAnimation, AnimationControls } from "framer-motion";
-import { useState } from "react";
+import { motion, useAnimation, type AnimationControls } from "framer-motion";
 import { MaskedImgAtom } from "../MaskedImgAtom/MaskedImgAtom";
 import { ResponsiveImgAtom } from "../ResponsiveImgAtom/ResponsiveImgAtom";
 
@@ -13,20 +12,14 @@ type Props = {
 };
 
 export const FeatureItemAtom = (props: Props) => {
-  const [isHovered, setIsHovered] = useState<boolean>(false);
-  const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({
-    x: 0,
-    y: 0,
-  });
+
   const controls: AnimationControls = useAnimation();
 
   const handleMouseEnter = async () => {
-    setIsHovered(true);
     await controls.start({ opacity: 1 });
   };
 
   const handleMouseLeave = async () => {
-    setIsHovered(false);
     await controls.start({ opacity: 0 });
   };
 
@@ -36,7 +29,6 @@ export const FeatureItemAtom = (props: Props) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left; // x position within the element.
     const y = e.clientY - rect.top; // y position within the element.
-    setMousePosition({ x, y });
     await controls.start({ x, y });
   };
 

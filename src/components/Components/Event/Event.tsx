@@ -1,6 +1,4 @@
-import { ContainerAtom } from "~/components/Atoms/ContainerAtom/ContainerAtom";
 import "./custom.css";
-import { RowAtom } from "~/components/Atoms/RowAtom/RowAtom";
 import { EventItems } from "../EventItems/EventItems";
 import React from "react";
 type Props = {

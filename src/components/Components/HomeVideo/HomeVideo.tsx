@@ -2,8 +2,6 @@ import Image from "next/image";
 import React from "react";
 import { ContainerAtom } from "~/components/Atoms/ContainerAtom/ContainerAtom";
 import { MaskedImgAtom } from "~/components/Atoms/MaskedImgAtom/MaskedImgAtom";
-import { SlideUpAnimationAtom } from "~/components/Atoms/SlideUpAnimationAtom/SlideUpAnimationAtom";
-import { TeamItemAtom } from "~/components/Atoms/TeamItemAtom/TeamItemAtom";
 import "./custom.css";
 type Props = {
   // Add props here
