@@ -67,18 +67,24 @@ export const HomeContainer = () => {
         img: "/images/home/video.jpg",
       },
     },
-    homeHeaderModuleProps: {
-      navBarProps: {
-        home: "/",
+    navBarModuleProps: {
+      theme: true,
+      navMenuProps: {
+        links: NavData,
+        theme: true,
+      },
+      navIconProps: {
+        home: "home",
+        theme: true,
+      },
+      navActionsProps: {
         showDrawer() {
           DrawerStore.open();
         },
         showSideDrawer() {
           SliderStore.open();
         },
-        links: NavData,
         theme: true,
-        // theme: nav.theme,
       },
     },
     drawerModuleProps: {

@@ -12,6 +12,26 @@ export const AboutMeContainer = () => {
   const drawer = useSnapshot(DrawerStore.state);
   const slider = useSnapshot(SliderStore.state);
   const aboutmeTemplateProps: React.ComponentProps<typeof AboutMeTemplate> = {
+    navBarModuleProps: {
+      theme: false,
+      navMenuProps: {
+        links: NavData,
+        theme: false,
+      },
+      navIconProps: {
+        home: "home",
+        theme: false,
+      },
+      navActionsProps: {
+        showDrawer() {
+          DrawerStore.open();
+        },
+        showSideDrawer() {
+          SliderStore.open();
+        },
+        theme: false,
+      },
+    },
     drawerModuleProps: {
       openDrawer: drawer.open,
       onCloseDrawer() {
@@ -25,18 +45,6 @@ export const AboutMeContainer = () => {
       },
     },
     aboutMeHeaderModuleProps: {
-      navBarProps: {
-        home: "/",
-        showDrawer() {
-          DrawerStore.open();
-        },
-        showSideDrawer() {
-          SliderStore.open();
-        },
-        links: NavData,
-        theme: false,
-        // theme: nav.theme,
-      },
       headerProps: {
         title: "About me",
         nav: ["Pages", "About Me", "#"],

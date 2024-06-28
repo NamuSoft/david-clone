@@ -1,6 +1,5 @@
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
-import { HomeHeaderModule } from "~/components/Modules/Home/HomeHeaderModule";
 import { HomeHeroModule } from "~/components/Modules/Home/HomeHeroModule";
 import { HomeProjectModule } from "~/components/Modules/Home/HomeProjectModule";
 import { HomeServiceModule } from "~/components/Modules/Home/HomeServiceModule";
@@ -13,6 +12,7 @@ import { HomeTestimonialModule } from "~/components/Modules/Home/HomeTestimonial
 import { HomePartnersModule } from "~/components/Modules/Home/HomePartnersModule";
 import { HomeSideDrawerModule } from "~/components/Modules/Home/HomeSideDrawerModule";
 import { DrawerModule } from "~/components/Modules/Drawer/DrawerModule";
+import { NavBarModule } from "~/components/Modules/NavBar/NavBarModule";
 
 type Props = {
   heroProps: React.ComponentProps<typeof HomeHeroModule>;
@@ -21,7 +21,6 @@ type Props = {
     typeof HomeTestimonialModule
   >;
   homePartnersModuleProps: React.ComponentProps<typeof HomePartnersModule>;
-  homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
   homeSideDrawerModuleProps: React.ComponentProps<typeof HomeSideDrawerModule>;
   homeFeaturesModuleProps: React.ComponentProps<typeof HomeFeaturesModule>;
   homeTeamModuleProps: React.ComponentProps<typeof HomeTeamModule>;
@@ -30,6 +29,7 @@ type Props = {
   homeMarqueeModuleProps: React.ComponentProps<typeof HomeMarqueeModule>;
   footerModuleProps: React.ComponentProps<typeof FooterModule>;
   drawerModuleProps: React.ComponentProps<typeof DrawerModule>;
+  navBarModuleProps: React.ComponentProps<typeof NavBarModule>;
 };
 
 export const HomeTemplate = (props: Props) => {
@@ -42,7 +42,8 @@ export const HomeTemplate = (props: Props) => {
       }}
     >
       <Header style={{ width: "100%", height: "100%", padding: 0 }}>
-        <HomeHeaderModule {...props.homeHeaderModuleProps} />
+        <NavBarModule {...props.navBarModuleProps} />
+
         <HomeSideDrawerModule {...props.homeSideDrawerModuleProps} />
         <DrawerModule {...props.drawerModuleProps} />
       </Header>

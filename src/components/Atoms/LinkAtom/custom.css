@@ -8,7 +8,6 @@
   vertical-align: middle; /* Aligns the element vertically */
   transition: all 0.2s; /* Transition for smooth effect */
   text-decoration: none; /* No underline */
-  color: inherit; /* Inherit parent color */
 }
 
 /* Hover state */
