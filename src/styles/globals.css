@@ -111,9 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 .h3, h3 {
     font-size: calc(1.3rem + .6vw);
 }
-*, ::after, ::before {
-    box-sizing: border-box;
-}
+
 p {
     font-size: 16px;
     color: #1f1f1f;
@@ -130,24 +128,6 @@ p{
   font-style: normal;
 }
 
-dl, ol, ul {
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-ol, ul {
-    padding-left: 2rem;
-}
-
-ol {
-    display: block;
-    list-style-type: decimal;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
-}
 /* .ant-input */
 
 
@@ -164,3 +144,12 @@ input[type="email" i] {
     padding-inline: 2px;
 }
 
+
+li {
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  display: list-item; /* Default display for li */
+  padding: 0; /* Reset padding */
+  margin: 0; /* Reset margin */
+  line-height: 1; /* Set line-height to remove extra space */
+  vertical-align: middle; /* Align items vertically if needed */
+}

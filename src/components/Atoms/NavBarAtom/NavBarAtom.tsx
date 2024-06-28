@@ -98,54 +98,6 @@ export const NavBarAtom = (props: Props) => {
         </div>
       </div>
 
-      {/* ------------------------------- */}
-      {/* <div className=''>
-        <SVGAtom
-          iconName={props.theme ? "logo" : "logoBlack"}
-          width={195}
-          height={62}
-        />
-      </div>
-      <div className='hidden flex-1 justify-center lg:flex'>
-        <div className='flex flex-row space-x-6 lg:space-x-10 xl:space-x-20'>
-          {props.links.map((navItem: NavItem, navIndex: number) => (
-            <div key={navIndex}>
-              {navItem.children ? (
-                <DropdownAtom
-                  name={navItem.name}
-                  child={navItem.children}
-                  className='lg:text-sm xl:text-xl'
-                />
-              ) : (
-                <Link
-                  className='underscore space-mono-regular block font-normal lg:text-sm xl:text-xl'
-                  href={navItem.url}
-                >
-                  {navItem.name}
-                </Link>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className='justify-center md:flex'>
-        {props.theme ? (
-          <div className='flex flex-row space-x-6 md:space-x-5 lg:space-x-5'>
-            <SearchOutlined
-              style={{ color: "#ff4a3b", fontSize: 40 }}
-              onClick={props.showDrawer}
-            />
-            <div
-              className='flex h-[52px] w-[52px] cursor-pointer flex-row justify-center rounded-full border-[#ff4a3b] align-middle lg:border'
-              onClick={props.showSideDrawer}
-            >
-              <MenuOutlined style={{ color: "#fff", fontSize: 22 }} />
-            </div>
-          </div>
-        ) : (
-
-        )}
-      </div> */}
     </div>
   );
 };
