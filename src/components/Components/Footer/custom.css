@@ -1,0 +1,93 @@
+ .about-widget .widget-title {
+    margin-bottom: 0;
+}
+.about-widget .logo {
+    max-width: 180px;
+    margin-bottom: 30px;
+}
+ .widget-title {
+    margin-bottom: 30px;
+}
+
+ .link-widget {
+    overflow: hidden;
+}
+
+@media (max-width: 1199px) {
+     .widget-title h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1399px) {
+     .widget-title h3 {
+        font-size: 29px;
+    }
+}
+ .widget-title h3 {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    font-family: 'Italiana';
+    font-weight: 400;
+    font-size: 34px;
+}
+
+.contact-ft {
+    margin-top: 20px;
+
+}
+
+.footer-section ul {
+    list-style: none;
+}
+ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ .contact-ft ul li {
+    padding-bottom: 15px;
+    position: relative;
+    padding-left: 35px;
+    color: #e5e3e3;
+    font-size: 17px;
+}
+.contact-ft ul li svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.link-widget ul li a {
+    color: #fff;
+    font-size: 18px;
+    line-height: 35px;
+    display: block;
+}
+
+ .subscribe .form-field {
+    position: relative;
+}
+
+.subscribe .form-field input {
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid hsla(0, 0%, 100%, .1);
+    padding: 15px 70px 15px 15px;
+    background: none;
+    color: #fff;
+}
+
+.subscribe .form-field button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 60px;
+    width: 60px;
+    background: none;
+    border: 0;
+    color: #ff4a3b;
+}

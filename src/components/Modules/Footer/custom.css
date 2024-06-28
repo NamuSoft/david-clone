@@ -1,0 +1,29 @@
+.footer-section {
+    background: #262626;
+    position: relative;
+    font-size: 15px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+@media (max-width: 991px) {
+    .footer-section .upper-footer {
+        padding: 80px 0 0;
+    }
+}
+.footer-section .upper-footer {
+    padding: 120px 0 70px;
+}
+
+.footer-section .lower-footer {
+    text-align: center;
+    position: relative;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    color: #fff;
+}

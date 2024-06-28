@@ -1,0 +1,29 @@
+@media (max-width: 991px) {
+.event-items {
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) {
+     .event-items {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+     .event-items h3 {
+        text-align: center;
+    }
+}
+@media (max-width: 1199px) {
+     .event-items h3 {
+        font-size: 40px;
+    }
+}
+ .event-items h3 {
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 30px;
+}

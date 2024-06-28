@@ -9,7 +9,7 @@ type Props = {
 export const SlideUpAnimationAtom = (props: Props) => {
   return (
     <div
-      className="item"
+      className='css-z1mjt4'
       style={{
         width: "100%",
         display: "inline-block",

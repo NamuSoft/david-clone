@@ -1,18 +1,18 @@
 
 @keyframes slide-up {
-    0% {
+0% {
     transform: translate3d(0px, 100%, 0px);
     visibility: visible;
 }
-
 100% {
     transform: translate3d(0px, 0px, 0px);
 }
 }
 
-.item{
+.css-z1mjt4 {
     animation-duration: 1000ms;
     animation-timing-function: ease;
+    animation-delay: 0ms;
     animation-name: slide-up;
     animation-direction: normal;
     animation-fill-mode: both;

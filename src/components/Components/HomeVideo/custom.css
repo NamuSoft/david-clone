@@ -1,0 +1,32 @@
+@media (max-width: 991px) {
+   .video-wrap .video-btn {
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+    }
+}
+
+.video-wrap .video-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 200px;
+    background: #ff4a3b;
+    z-index: 11;
+    border: 0;
+    padding: 50;
+}
+
+
+.video-wrap .video-btn img {
+    width: 70%;
+    height: auto;
+    margin-left: auto ;
+    margin-right: auto;
+
+}

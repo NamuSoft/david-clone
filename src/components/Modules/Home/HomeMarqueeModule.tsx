@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import MarqueeAtom from "~/components/Atoms/MarqueeAtom/MarqueeAtom";
+import {MarqueeAtom} from "~/components/Atoms/MarqueeAtom/MarqueeAtom";
 // import styles from "./HomeModule.module.css";
 
 // HomeHeroModule functional component

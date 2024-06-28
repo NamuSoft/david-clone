@@ -94,63 +94,59 @@
   font-weight: 400;
   font-style: normal;
 }
-
+body {
+    font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
 h1, h2, h3, h4, h5, h6 {
     color: #1f1f1f;
-    font-family: Italiana;
+    font-family: "Italiana";
     font-weight: 400;
 }
-.base-black{
-  color: #1f1f1f;
-}
-.bg-base-black{
-  background-color: #1f1f1f;
-}
-search-form .form-group input[type=text] {
-    position: relative;
-    display: block;
-    font-size: 18px;
-    line-height: 50px;
-    color: #000;
-    height: 70px;
-    width: 100%;
-    padding: 10px 30px;
-    background: #fff;
-    transition: all .5s ease;
-    font-weight: 500;
-    text-transform: capitalize;
-    border-radius: 50%;
-    border: 0;
-}
 
-button, input, optgroup, select, textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+.h2, h2 {
+    font-size: calc(1.325rem + .9vw);
 }
-
-.page-title .breadcumb-wrap ol {
-    padding-left: 0;
-    margin-bottom: 0;
-    display: flex;
-    justify-content: flex-end;
+.h3, h3 {
+    font-size: calc(1.3rem + .6vw);
 }
-
-.header-style-3 .main-menu ul>li>a, .header-style-4 .main-menu ul>li>a {
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+p {
+    font-size: 16px;
     color: #1f1f1f;
+    line-height: 1.8em;
+}
+p {
+
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+p{
+    font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.underscore::before {
-  content: "_";
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+ol, ul {
+    padding-left: 2rem;
 }
 
-title-s3 h2 {
-    font-size: 80px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #fff;
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
 }
 /* .ant-input */
 
@@ -212,4 +208,25 @@ section {
 
 .project-section .slick-slide:nth-child(2n) .project-item, .project-section-s4 .slick-slide:nth-child(2n) .project-item {
     margin-top: 120px;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+input[type="email" i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+
+:where(.css-dev-only-do-not-override-1j1c6t0).ant-layout-header {
+    /* height: 64px;
+    padding: 0 50px;
+    color: rgba(0, 0, 0, 0.88); */
+    line-height:normal;
 }

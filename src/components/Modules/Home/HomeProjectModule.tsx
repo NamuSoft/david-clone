@@ -1,4 +1,4 @@
-import MarqueeAtom from "~/components/Atoms/MarqueeAtom/MarqueeAtom";
+import {MarqueeAtom} from "~/components/Atoms/MarqueeAtom/MarqueeAtom";
 import { SliderAtom } from "~/components/Atoms/SliderAtom/SliderAtom";
 import { HomeProjectComponent } from "~/components/Components/HomeProjectComponents/HomeProjectComponent";
 

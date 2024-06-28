@@ -1,17 +1,14 @@
-import React from "react";
-import type { FC, ReactNode } from "react";
-// import styles from "./MarqueeAtom.module.css"; // Import CSS module
+import type {  ReactNode } from "react";
+import styles from "./MarqueeAtom.module.css"; // Import CSS module
 
 type Props = {
   children: ReactNode;
 };
 
-const MarqueeAtom: FC<Props> = ({ children }) => {
+export const MarqueeAtom = ( props:Props) => {
   return (
     <div className='marquee'>
-      <div className='marquee-content'>{children}</div>
+      <div className='marquee-content'>{props.children}</div>
     </div>
   );
 };
-
-export default MarqueeAtom;

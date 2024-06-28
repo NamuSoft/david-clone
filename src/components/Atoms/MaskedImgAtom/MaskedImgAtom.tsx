@@ -4,6 +4,7 @@ import "./custom.css";
 type Props = {
   children: ReactNode;
   mask?: string;
+  className?: string; 
 };
 
 export const MaskedImgAtom = (props: Props) => {
@@ -14,7 +15,10 @@ export const MaskedImgAtom = (props: Props) => {
       } :   {}
 
   return (
-    <div style={style} className={ props.mask?`mask`: "rounded"}>
+    <div
+      style={style}
+      className={`${props.mask ? "mask" : "rounded"} ${props.className}`}
+    >
       {props.children}
     </div>
   );
