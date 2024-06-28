@@ -18,11 +18,7 @@
     overflow: hidden;
 }
 
-.event-item h4,
-.event-item span,
-.event-item h3 {
-    color: #1f1f1f;
-}
+
 
 /* Media queries for .event-item */
 @media (max-width: 767px) {

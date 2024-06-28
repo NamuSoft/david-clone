@@ -6,20 +6,13 @@ import React from "react";
 type Props = {
   // Add props here
   eventsData: React.ComponentProps<typeof EventItems>[];
+  className?: string;
 };
 
 export const Event = (props: Props) => {
-  return (
-    <div className='event-section mt-0'>
-      <ContainerAtom>
-        <RowAtom>
-          {props.eventsData.map((item, index) => (
-            <div key={index} className='w-full  pl-4  pr-4 md:w-1/2 lg:w-1/2'>
-              <EventItems {...item} />
-            </div>
-          ))}
-        </RowAtom>
-      </ContainerAtom>
+  return props.eventsData.map((item, index) => (
+    <div key={index} className={props.className}>
+      <EventItems {...item} />
     </div>
-  );
+  ));
 };

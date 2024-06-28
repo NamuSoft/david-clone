@@ -5,3 +5,4 @@
 // export { default as outLink } from "./outLink.svg";
 export { default as logo } from "./logo.svg";
 export { default as logoBlack } from "./logoBlack.svg";
+export { default as witch } from "./witch.svg";

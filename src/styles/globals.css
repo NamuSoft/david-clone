@@ -100,7 +100,6 @@ body {
   font-style: normal;
 }
 h1, h2, h3, h4, h5, h6 {
-    color: #1f1f1f;
     font-family: "Italiana";
     font-weight: 400;
 }
@@ -114,7 +113,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     font-size: 16px;
-    color: #1f1f1f;
     line-height: 1.8em;
 }
 p {
