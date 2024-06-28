@@ -13,12 +13,14 @@ import { HomeServiceData } from "~/data/Home/HomeServiceData";
 import { HomeMarqueeData } from "~/data/Home/HomeMarqueeData";
 import { HomeContactData } from "~/data/Home/HomeContactData";
 import { AboutEventData } from "~/data/About/AboutEventData";
+import { HomeBlogData } from "~/data/Home/HomeBlogData";
 
 export const HomeContainer = () => {
   const drawer = useSnapshot(DrawerStore.state);
   const slider = useSnapshot(SliderStore.state);
 
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
+    homeBlogModuleProps: HomeBlogData,
     homeEventModuleProps: {
       eventProps: {
         eventsData: AboutEventData,

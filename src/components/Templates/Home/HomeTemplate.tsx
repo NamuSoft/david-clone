@@ -14,6 +14,7 @@ import { HomeSideDrawerModule } from "~/components/Modules/Home/HomeSideDrawerMo
 import { DrawerModule } from "~/components/Modules/Drawer/DrawerModule";
 import { NavBarModule } from "~/components/Modules/NavBar/NavBarModule";
 import { HomeEventModule } from "~/components/Modules/Home/HomeEventModule";
+import { HomeBlogModule } from "~/components/Modules/Home/HomeBlogModule";
 
 type Props = {
   heroProps: React.ComponentProps<typeof HomeHeroModule>;
@@ -32,6 +33,7 @@ type Props = {
   footerModuleProps: React.ComponentProps<typeof FooterModule>;
   drawerModuleProps: React.ComponentProps<typeof DrawerModule>;
   navBarModuleProps: React.ComponentProps<typeof NavBarModule>;
+  homeBlogModuleProps: React.ComponentProps<typeof HomeBlogModule>;
 };
 
 export const HomeTemplate = (props: Props) => {
@@ -61,6 +63,7 @@ export const HomeTemplate = (props: Props) => {
         <HomeTeamModule {...props.homeTeamModuleProps} />
         <HomeVideoModule {...props.homeVideoModuleProps} />
         <HomeEventModule {...props.homeEventModuleProps} />
+        <HomeBlogModule {...props.homeBlogModuleProps} />
       </Content>
 
       <Footer style={{ padding: 0, minHeight: 50 }}>

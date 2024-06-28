@@ -1,12 +1,8 @@
-import Image from "next/image";
-import { SectionPaddingAtom } from "~/components/Atoms/SectionPaddingAtom/SectionPaddingAtom";
 import "./custom.css";
-import { HomeVideo } from "~/components/Components/HomeVideo/HomeVideo";
 import { Event } from "~/components/Components/Event/Event";
 import { ContainerAtom } from "~/components/Atoms/ContainerAtom/ContainerAtom";
 import { RowAtom } from "~/components/Atoms/RowAtom/RowAtom";
 import { ResponsiveImgAtom } from "~/components/Atoms/ResponsiveImgAtom/ResponsiveImgAtom";
-import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 
 type Props = {
   //
