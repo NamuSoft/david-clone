@@ -10,7 +10,7 @@ type Props = {
 
 export const PortfolioPortfolioModule = (props: Props) => {
   return (
-    <SectionPaddingAtom className='project-section-2'>
+    <SectionPaddingAtom className='project-section-2 bg-white'>
       <ContainerAtom>
         <RowAtom className=''>
           <div className='sortable-gallery relative max-w-full flex-1 flex-grow px-4 pl-4 pr-4 sm:w-full '>

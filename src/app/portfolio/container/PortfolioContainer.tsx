@@ -4,6 +4,7 @@ import DrawerStore from "~/store/DrawerStore";
 import { NavData } from "~/data/NavData";
 import SliderStore from "~/store/SliderStore";
 import { PortfolioData } from "~/data/Portfolio/PortfolioData";
+import { NewsLetterData } from "~/data/Portfolio/newsLettereData";
 
 export const PortfolioContainer = () => {
   const drawer = useSnapshot(DrawerStore.state);
@@ -44,8 +45,8 @@ export const PortfolioContainer = () => {
       },
       pageTitleModuleProps: {
         pageTitleProps: {
-          title: "About me",
-          nav: ["Pages", "About Me", "#"],
+          title: "Portfolio",
+          nav: ["Home", "Portfolio", "#"],
         },
       },
       footerModuleProps: {
@@ -57,7 +58,9 @@ export const PortfolioContainer = () => {
       portfolioPortfolioModuleProps: {
         data: PortfolioData,
       },
-      portfolioNewsletterModuleProps: { title: "PortfolioNewsletterModule" },
+      portfolioNewsletterModuleProps: {
+        newsLetterProps: NewsLetterData,
+      },
     };
 
   return <PortfolioTemplate {...portfolioTemplateProps} />;

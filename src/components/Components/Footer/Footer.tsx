@@ -9,6 +9,7 @@ import {
 import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 import type * as svgs from "public/svgs";
 import { Input } from "antd";
+import { InputAtom } from "~/components/Atoms/InputAtom/InputAtom";
 
 type Props = {
   // Add props here
@@ -71,19 +72,7 @@ export const Footer = (props: Props) => {
               <div className='widget-title'>
                 <h3>Subscribe</h3>
               </div>
-              <form>
-                <div className='form-field'>
-                  <Input
-                    type='email'
-                    placeholder='Your e-mail address'
-                    id='semail'
-                    required
-                  />
-                  <button type='submit' className=' cursor-pointer'>
-                    <ArrowRightOutlined />
-                  </button>
-                </div>
-              </form>
+              <InputAtom />
             </div>
           </div>
         </div>{" "}
