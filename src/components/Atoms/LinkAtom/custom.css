@@ -1,13 +1,7 @@
 /* Basic reset for the element */
 .a {
-  box-sizing: border-box;
-  display: inline-block; /* Change to inline-block for better control */
-  padding: 0; /* Reset padding */
-  margin: 0; /* Reset margin */
-  line-height: 1; /* Adjust line-height to 1 to remove extra space */
-  vertical-align: middle; /* Aligns the element vertically */
+
   transition: all 0.2s; /* Transition for smooth effect */
-  text-decoration: none; /* No underline */
 }
 
 /* Hover state */

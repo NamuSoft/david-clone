@@ -42,8 +42,8 @@ export const AboutMeContainer = () => {
         },
       },
     },
-    aboutMeHeaderModuleProps: {
-      headerProps: {
+    pageTitleModuleProps: {
+      pageTitleProps: {
         title: "About me",
         nav: ["Pages", "About Me", "#"],
       },

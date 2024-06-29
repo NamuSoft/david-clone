@@ -5,9 +5,10 @@ import { Content, Footer, Header } from "antd/es/layout/layout";
 import { FooterModule } from "~/components/Modules/Footer/FooterModule";
 import { DrawerModule } from "~/components/Modules/Drawer/DrawerModule";
 import { NavBarModule } from "~/components/Modules/NavBar/NavBarModule";
+import { PageTitleModule } from "~/components/Modules/PageTitle/PageTitleModule";
 
 type Props = {
-  aboutMeHeaderModuleProps: React.ComponentProps<typeof AboutMeHeaderModule>;
+  pageTitleModuleProps: React.ComponentProps<typeof PageTitleModule>;
   drawerModuleProps: React.ComponentProps<typeof DrawerModule>;
   aboutMeContentModuleProps: React.ComponentProps<typeof AboutMeContentModule>;
   footerModuleProps: React.ComponentProps<typeof FooterModule>;
@@ -20,7 +21,7 @@ export const AboutMeTemplate = (props: Props) => {
       <Header style={{ width: "100%", height: "100%", padding: 0 }}>
         <NavBarModule {...props.navBarModuleProps} />
 
-        <AboutMeHeaderModule {...props.aboutMeHeaderModuleProps} />
+        <PageTitleModule {...props.pageTitleModuleProps} />
         <DrawerModule {...props.drawerModuleProps} />
       </Header>
 
