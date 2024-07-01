@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { SectionPaddingAtom } from "~/components/Atoms/SectionPaddingAtom/SectionPaddingAtom";
 import { HomeFeatures } from "~/components/Components/HomeFeatures/HomeFeatures";
 import "./custom.css";

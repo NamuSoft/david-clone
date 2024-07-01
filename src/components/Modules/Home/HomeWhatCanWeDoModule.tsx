@@ -1,7 +1,7 @@
 
 
 type Props = {
-  title?: string;
+  //
 };
 
 export const HomeWhatCanWeDoModule = (props: Props) => {

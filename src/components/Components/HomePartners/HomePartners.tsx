@@ -1,7 +1,8 @@
-import { CarouselAtom } from "~/components/Atoms/CarouselAtom/CarouselAtom";
 import styles from "./custom.module.css";
-import Image from "next/image";
-import { Break, SliderAtom } from "~/components/Atoms/SliderAtom/SliderAtom";
+import {
+  type Break,
+  SliderAtom,
+} from "~/components/Atoms/SliderAtom/SliderAtom";
 import { ResponsiveImgAtom } from "~/components/Atoms/ResponsiveImgAtom/ResponsiveImgAtom";
 import { ContainerAtom } from "~/components/Atoms/ContainerAtom/ContainerAtom";
 import { RowAtom } from "~/components/Atoms/RowAtom/RowAtom";

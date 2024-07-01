@@ -1,6 +1,6 @@
 import type { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
-import type { MouseEventHandler, PropsWithChildren, ReactNode } from "react";
+import type { MouseEventHandler, PropsWithChildren } from "react";
 import "./custom.css";
 
 type Props = {

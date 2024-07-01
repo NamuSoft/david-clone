@@ -1,5 +1,4 @@
-import { ServiceAtom } from "~/components/Atoms/ServiceAtom/ServiceAtom";
-import { Service } from "~/components/Components/Service/Service";
+import { type ServiceAtom } from "~/components/Atoms/ServiceAtom/ServiceAtom";
 
 export const AboutServiceData: React.ComponentProps<typeof ServiceAtom>[] = [
   {

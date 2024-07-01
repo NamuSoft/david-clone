@@ -1,6 +1,5 @@
 import { ContainerAtom } from "~/components/Atoms/ContainerAtom/ContainerAtom";
 import "./custom.css";
-import Image from "next/image";
 import {
   ArrowRightOutlined,
   HomeOutlined,

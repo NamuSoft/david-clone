@@ -1,6 +1,4 @@
-import Image from "next/image";
 import React from "react";
-import { MarqueeAtom } from "~/components/Atoms/MarqueeAtom/MarqueeAtom";
 import { ResponsiveImgAtom } from "~/components/Atoms/ResponsiveImgAtom/ResponsiveImgAtom";
 import "./custom.css"; // Import CSS module
 import { RowAtom } from "~/components/Atoms/RowAtom/RowAtom";

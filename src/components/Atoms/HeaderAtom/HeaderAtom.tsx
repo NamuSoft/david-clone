@@ -1,5 +1,4 @@
 import { Breadcrumb } from "antd";
-import { ContainerAtom } from "../ContainerAtom/ContainerAtom";
 import "./custom.css";
 
 type Props = {

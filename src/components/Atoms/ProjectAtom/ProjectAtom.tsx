@@ -1,8 +1,6 @@
 import Image from "next/image";
 import styles from "./projectAtom.module.css";
-import { SlideUpAnimationAtom } from "../SlideUpAnimationAtom/SlideUpAnimationAtom";
 import { MaskedImgAtom } from "../MaskedImgAtom/MaskedImgAtom";
-import Link from "next/link";
 import { LinkAtom } from "../LinkAtom/LinkAtom";
 
 type Props = {

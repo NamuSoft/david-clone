@@ -1,5 +1,5 @@
 import { type PropsWithChildren, useEffect, useState } from "react";
-import { Drawer, Input } from "antd";
+import { Drawer } from "antd";
 import "./custom.css";
 type Props = {
   // title: string;

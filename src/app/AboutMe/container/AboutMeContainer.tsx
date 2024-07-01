@@ -6,11 +6,9 @@ import SliderStore from "~/store/SliderStore";
 import { AboutContentData } from "~/data/About/AboutContentData";
 import { AboutEventData } from "~/data/About/AboutEventData";
 import { AboutServiceData } from "~/data/About/AboutServiceData";
-import { HomeProejctData } from "~/data/Home/HomeProjectData";
 
 export const AboutMeContainer = () => {
   const drawer = useSnapshot(DrawerStore.state);
-  const slider = useSnapshot(SliderStore.state);
   const aboutmeTemplateProps: React.ComponentProps<typeof AboutMeTemplate> = {
     navBarModuleProps: {
       theme: false,

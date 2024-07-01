@@ -1,4 +1,4 @@
-import { HomeHeroModule } from "~/components/Modules/Home/HomeHeroModule";
+import { type HomeHeroModule } from "~/components/Modules/Home/HomeHeroModule";
 
 export const HomeHeroData: React.ComponentProps<typeof HomeHeroModule> = {
   subtitle: "Always Inovative",
