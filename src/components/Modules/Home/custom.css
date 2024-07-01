@@ -36,7 +36,6 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #1f1f1f;
     font-family: Italiana;
     font-weight: 400;
 }
@@ -494,5 +493,17 @@ img, svg {
 
 }
 
+
+.custom-drawer .space-mono-regular span {
+    position: relative;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: normal;
+}
+
+.custom-drawer{
+    max-height: 100vh;
+}
 
 

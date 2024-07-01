@@ -23,7 +23,17 @@ export const AboutMeContentModule = (props: Props) => {
           <div className=' lg:w-2/3'>
             <div className='about-page-left block'>
               <AboutContent {...props.aboutContentProps} />
-              <Event {...props.eventProps} />
+              <div className='event-section mt-o'>
+                <ContainerAtom>
+                  <RowAtom>
+                    <Event
+                      {...props.eventProps}
+                      className="'w-full  lg:w-1/2'  pl-4 pr-4 md:w-1/2"
+                    />
+                  </RowAtom>
+                </ContainerAtom>
+              </div>
+
               <Service {...props.serviceProps} />
             </div>
           </div>

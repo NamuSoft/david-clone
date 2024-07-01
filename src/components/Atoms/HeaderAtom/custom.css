@@ -1,4 +1,4 @@
-.page-title {
+/* .page-title {
     background: #fdf9f6;
     min-height: 300px;
     position: relative;
@@ -6,7 +6,7 @@
     justify-content: flex-end;
     flex-direction: column;
     z-index: 1;
-}
+} */
 
 .page-title .breadcumb-wrap {
     padding-bottom: 30px;
@@ -91,5 +91,33 @@
 @media (max-width: 767px) {
     .page-title .breadcumb-wrap ol li {
         font-size: 18px;
+    }
+}
+
+/* Default styling for breadcrumb items */
+.breadcumb-wrap ol li {
+    display: inline-block;
+    padding: 0 15px;
+    color: #5c5c5c;
+    position: relative;
+    font-size: 20px; /* Default font size */
+}
+
+/* Media query for up to 767px */
+@media (max-width: 767px) {
+    .page-title .breadcumb-wrap ol li {
+        font-size: 18px; /* Adjusted font size for max-width 767px */
+    }
+}
+
+/* Media query for up to 575px */
+@media (max-width: 575px) {
+    .page-title .breadcumb-wrap ol li:first-child {
+        padding-left: 0; /* Adjust padding for first breadcrumb item */
+    }
+    
+    .page-title .breadcumb-wrap ol li {
+        font-size: 16px; /* Adjust font size for max-width 575px */
+        padding: 0 10px; /* Adjust padding for max-width 575px */
     }
 }

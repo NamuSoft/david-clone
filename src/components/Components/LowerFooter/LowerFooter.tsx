@@ -9,7 +9,7 @@ type Props = {
 export const LowerFooter = (props: Props) => {
   return (
     <ContainerAtom>
-      <div className='ft space-mono-regular flex flex-col items-center justify-center md:flex-row'>
+      <div className='ft space-mono-regular flex flex-col items-center justify-center text-white md:flex-row'>
         <div className='relative w-full max-w-full flex-1 flex-grow px-4 md:w-full lg:w-1/2'>
           <ul className='lower-footer-link flex justify-center md:justify-start'>
             <li className='mr-4'>

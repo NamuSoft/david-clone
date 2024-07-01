@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { type PropsWithChildren, useEffect, useState } from "react";
 import { Drawer, Input } from "antd";
-import { CloseOutlined, SearchOutlined } from "@ant-design/icons";
 import "./custom.css";
 type Props = {
   // title: string;
   openDrawer: boolean;
   onCloseDrawer: () => void;
-  theme: boolean;
 };
 
-export const DrawerAtom = (props: Props) => {
+export const DrawerAtom = (props: PropsWithChildren<Props>) => {
   const [animationClass, setAnimationClass] = useState("");
 
   useEffect(() => {
@@ -19,14 +17,6 @@ export const DrawerAtom = (props: Props) => {
       setAnimationClass("animate-slideOut");
     }
   }, [props.openDrawer]);
-
-  const SearchIcon = (
-    <div className='left-auto right-[25px] top-[25px] rounded-e-full bg-[#ff4a3b] p-4 text-white'>
-      <SearchOutlined
-        style={{ color: "white", fontSize: 20, padding: "10px" }}
-      />
-    </div>
-  );
 
   return (
     <>
@@ -43,34 +33,7 @@ export const DrawerAtom = (props: Props) => {
         rootClassName='pt-10'
         rootStyle={{ paddingTop: "10px" }}
       >
-        <div className='flex flex-row justify-end '>
-          <div
-            className='left-auto right-[25px] top-[25px] rounded-full bg-[#ff4a3b] p-2 text-white'
-            onClick={props.onCloseDrawer}
-          >
-            <CloseOutlined
-              style={{ color: "white", fontSize: 20, padding: "10px" }}
-            />
-          </div>
-        </div>
-
-        <div
-          className={` flex-coll form mt-[350px] flex h-max justify-center align-middle`}
-        >
-          <Input
-            placeholder='Search Here'
-            allowClear
-            size='large'
-            suffix={SearchIcon}
-            className='rounded-full p-0 sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[40%]'
-            styles={{
-              input: { padding: 20, fontSize: "medium" },
-              suffix: {
-                overflow: "hidden",
-              },
-            }}
-          />
-        </div>
+        {props.children}
       </Drawer>
     </>
   );

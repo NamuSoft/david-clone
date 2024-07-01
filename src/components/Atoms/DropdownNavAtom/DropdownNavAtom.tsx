@@ -2,15 +2,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { type NavItem } from "../NavBarAtom/NavBarAtom";
 import "./custom.css";
 import { LinkAtom } from "../LinkAtom/LinkAtom";
-
-// type NavItem = {
-//   name: string;
-//   url: string;
-//   children?: NavItem[];
-// };
+import { type NavItem } from "~/components/Components/NavMenu/NavMenu";
 
 type Props = {
   item: NavItem;

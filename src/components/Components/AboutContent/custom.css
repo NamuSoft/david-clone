@@ -60,9 +60,31 @@
 /* General styles */
 .about-content p {
     margin-bottom: 0;
+    /* color: black; */
 }
+
+.about-content p {
+    font-size: 16px;
+    color: #1f1f1f;
+    line-height: 1.8em;
+      font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.about-content p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
 @media (max-width: 991px) {
     .about-page .about-content {
         text-align: center;
     }
+}
+.about-content h3 {
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 6px;
+        color: #1f1f1f;
+    font-family: Italiana;
 }

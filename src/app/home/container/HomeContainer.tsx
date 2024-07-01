@@ -7,21 +7,41 @@ import { HomeTeamData } from "~/data/Home/HomeTeamData";
 import { useSnapshot } from "valtio";
 import DrawerStore from "~/store/DrawerStore";
 import SliderStore from "~/store/SliderStore";
-import NavStore from "~/store/NavStore";
 import { NavData } from "~/data/NavData";
 import { HomeHeroData } from "~/data/Home/HomeHeroData";
 import { HomeServiceData } from "~/data/Home/HomeServiceData";
 import { HomeMarqueeData } from "~/data/Home/HomeMarqueeData";
+import { HomeContactData } from "~/data/Home/HomeContactData";
+import { AboutEventData } from "~/data/About/AboutEventData";
+import { HomeBlogData } from "~/data/Home/HomeBlogData";
 
 export const HomeContainer = () => {
-  const nav = useSnapshot(NavStore.state);
   const drawer = useSnapshot(DrawerStore.state);
   const slider = useSnapshot(SliderStore.state);
 
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
-    title: "Home",
+    homeBlogModuleProps: HomeBlogData,
+    homeEventModuleProps: {
+      eventProps: {
+        eventsData: AboutEventData,
+      },
+    },
     homeServiceModuleProps: HomeServiceData,
     heroProps: HomeHeroData,
+    homeSideDrawerModuleProps: {
+      sideDrawerProps: {
+        openSideDrawer: slider.open,
+        onCloseSideDrawer() {
+          SliderStore.close();
+        },
+      },
+      onCloseSideDrawer() {
+        SliderStore.close();
+      },
+      theme: slider.theme,
+      projects: HomeProejctData,
+      contacts: HomeContactData,
+    },
     projectModuleProps: {
       projectComponentProp: {
         data: HomeProejctData,
@@ -55,34 +75,36 @@ export const HomeContainer = () => {
         img: "/images/home/video.jpg",
       },
     },
-    homeHeaderModuleProps: {
-      title: "",
-      navBarProps: {
-        home: "/",
+    navBarModuleProps: {
+      theme: true,
+      navMenuProps: {
+        links: NavData,
+        theme: true,
+      },
+      navIconProps: {
+        home: "home",
+        theme: true,
+      },
+      navActionsProps: {
         showDrawer() {
           DrawerStore.open();
         },
         showSideDrawer() {
           SliderStore.open();
         },
-        links: NavData,
         theme: true,
-        // theme: nav.theme,
+      },
+    },
+    drawerModuleProps: {
+      openDrawer: drawer.open,
+      onCloseDrawer() {
+        DrawerStore.close();
       },
       drawerProps: {
         openDrawer: drawer.open,
-        theme: drawer.theme,
         onCloseDrawer() {
           DrawerStore.close();
         },
-      },
-      sideDrawerProps: {
-        openSideDrawer: slider.open,
-        onCloseSideDrawer() {
-          SliderStore.close();
-        },
-        theme: slider.theme,
-        projects: HomeProejctData,
       },
     },
     footerModuleProps: {

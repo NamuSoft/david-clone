@@ -1,17 +1,16 @@
 import type { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
-import type { MouseEventHandler, ReactNode } from "react";
+import type { MouseEventHandler, PropsWithChildren, ReactNode } from "react";
 import "./custom.css";
 
 type Props = {
   // Add props here
   href: Url;
-  children?: ReactNode;
   className?: string;
   onClick?: MouseEventHandler<HTMLAnchorElement> | undefined;
 };
 
-export const LinkAtom = (props: Props) => {
+export const LinkAtom = (props: PropsWithChildren<Props>) => {
   return (
     <Link
       href={props.href}

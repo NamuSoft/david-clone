@@ -1,6 +1,6 @@
 
 
-p{
+.testimonnial-item p{
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -10,7 +10,7 @@ p{
     color: white;
 
 }
-span{
+.testimonnial-item span{
     font-size: 25px;
     font-style: normal;
     font-weight: 400;
@@ -20,7 +20,7 @@ span{
     color: white;
 
 }
-
+.testimonnial-item 
 small{
     font-size: 18px;
     font-style: normal;
@@ -31,13 +31,13 @@ small{
     color: #ff4a3b;
 }
 @media (max-width: 991px) {
-    p{
+    .testimonnial-item p{
         font-size: 30px;
     }
-    span{
+    .testimonnial-item span{
         font-size: 20px;
     }
-    small{
+    .testimonnial-item small{
         font-size: 16;
     }
 }

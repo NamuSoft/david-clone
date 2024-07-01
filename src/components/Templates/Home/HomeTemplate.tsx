@@ -1,9 +1,5 @@
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
-import { HomeHeaderModule } from "~/components/Modules/Home/HomeHeaderModule";
-import { HomeTestimonial } from "~/components/Components/HomeTestimonial/HomeTestimonial";
-import { HomePartners } from "~/components/Components/HomePartners/HomePartners";
-import { HomeFeatures } from "~/components/Components/HomeFeatures/HomeFeatures";
 import { HomeHeroModule } from "~/components/Modules/Home/HomeHeroModule";
 import { HomeProjectModule } from "~/components/Modules/Home/HomeProjectModule";
 import { HomeServiceModule } from "~/components/Modules/Home/HomeServiceModule";
@@ -14,22 +10,30 @@ import { HomeVideoModule } from "~/components/Modules/Home/HomeVideoModule copy"
 import { FooterModule } from "~/components/Modules/Footer/FooterModule";
 import { HomeTestimonialModule } from "~/components/Modules/Home/HomeTestimonialModule";
 import { HomePartnersModule } from "~/components/Modules/Home/HomePartnersModule";
+import { HomeSideDrawerModule } from "~/components/Modules/Home/HomeSideDrawerModule";
+import { DrawerModule } from "~/components/Modules/Drawer/DrawerModule";
+import { NavBarModule } from "~/components/Modules/NavBar/NavBarModule";
+import { HomeEventModule } from "~/components/Modules/Home/HomeEventModule";
+import { HomeBlogModule } from "~/components/Modules/Home/HomeBlogModule";
 
 type Props = {
-  title: string;
   heroProps: React.ComponentProps<typeof HomeHeroModule>;
   projectModuleProps: React.ComponentProps<typeof HomeProjectModule>;
   homeTestimonialModuleProps: React.ComponentProps<
     typeof HomeTestimonialModule
   >;
   homePartnersModuleProps: React.ComponentProps<typeof HomePartnersModule>;
-  homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
+  homeSideDrawerModuleProps: React.ComponentProps<typeof HomeSideDrawerModule>;
   homeFeaturesModuleProps: React.ComponentProps<typeof HomeFeaturesModule>;
   homeTeamModuleProps: React.ComponentProps<typeof HomeTeamModule>;
   homeVideoModuleProps: React.ComponentProps<typeof HomeVideoModule>;
   homeServiceModuleProps: React.ComponentProps<typeof HomeServiceModule>;
   homeMarqueeModuleProps: React.ComponentProps<typeof HomeMarqueeModule>;
+  homeEventModuleProps: React.ComponentProps<typeof HomeEventModule>;
   footerModuleProps: React.ComponentProps<typeof FooterModule>;
+  drawerModuleProps: React.ComponentProps<typeof DrawerModule>;
+  navBarModuleProps: React.ComponentProps<typeof NavBarModule>;
+  homeBlogModuleProps: React.ComponentProps<typeof HomeBlogModule>;
 };
 
 export const HomeTemplate = (props: Props) => {
@@ -42,7 +46,10 @@ export const HomeTemplate = (props: Props) => {
       }}
     >
       <Header style={{ width: "100%", height: "100%", padding: 0 }}>
-        <HomeHeaderModule {...props.homeHeaderModuleProps} />
+        <NavBarModule {...props.navBarModuleProps} />
+
+        <HomeSideDrawerModule {...props.homeSideDrawerModuleProps} />
+        <DrawerModule {...props.drawerModuleProps} />
       </Header>
 
       <Content style={{ overflow: "hidden" }}>
@@ -55,6 +62,8 @@ export const HomeTemplate = (props: Props) => {
         <HomeFeaturesModule {...props.homeFeaturesModuleProps} />
         <HomeTeamModule {...props.homeTeamModuleProps} />
         <HomeVideoModule {...props.homeVideoModuleProps} />
+        <HomeEventModule {...props.homeEventModuleProps} />
+        <HomeBlogModule {...props.homeBlogModuleProps} />
       </Content>
 
       <Footer style={{ padding: 0, minHeight: 50 }}>

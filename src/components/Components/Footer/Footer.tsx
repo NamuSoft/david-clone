@@ -19,16 +19,16 @@ type Props = {
 export const Footer = (props: Props) => {
   return (
     <ContainerAtom>
-      <div className='row'>
+      <div className='row text-white'>
         <div className='grid grid-cols-12 gap-4'>
-          <div className=' col-span-3 sm:col-span-12 md:col-span-6 lg:col-span-3'>
+          <div className=' col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-3'>
             <div className='widget about-widget'>
               <div className='logo widget-title'>
                 <SVGAtom iconName={props.logo} width={195} height={62} />
               </div>
             </div>
           </div>
-          <div className='col-span-4 sm:col-span-12 md:col-span-6 lg:col-span-4'>
+          <div className='col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-4'>
             <div className='widget link-widget'>
               <div className='widget-title'>
                 <h3> Address</h3>
@@ -49,7 +49,7 @@ export const Footer = (props: Props) => {
               </div>
             </div>
           </div>
-          <div className='col-span-2 sm:col-span-12 md:col-span-6 lg:col-span-2 xl:col-span-2'>
+          <div className='col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-2 xl:col-span-2'>
             <div className='widget link-widget'>
               <div className='widget-title'>
                 <h3>Follow Us</h3>
@@ -67,7 +67,7 @@ export const Footer = (props: Props) => {
               </ul>
             </div>
           </div>
-          <div className='col-span-3 sm:col-span-12 md:col-span-6 lg:col-span-3 xl:col-span-3'>
+          <div className='col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-3 xl:col-span-3'>
             <div className='widget subscribe'>
               <div className='widget-title'>
                 <h3>Subscribe</h3>
