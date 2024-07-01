@@ -1,18 +1,16 @@
-import {type  ReactNode } from "react";
-import "./custom.css"
+import { PropsWithChildren, type ReactNode } from "react";
+import "./custom.css";
 
 type Props = {
   // Add props here
-  children: ReactNode;
-    };
+  className?: string;
+};
 
-export const SlideUpAnimationAtom = (props: Props) => {
+export const SlideUpAnimationAtom = (props: PropsWithChildren<Props>) => {
   return (
     <div
-      className='css-z1mjt4'
+      className={`css-z1mjt4 ${props.className}`}
       style={{
-        width: "100%",
-        display: "inline-block",
         animationDelay: "0ms",
       }}
     >

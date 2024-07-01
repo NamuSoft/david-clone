@@ -12,19 +12,19 @@ const NextArrow = (props: Props) => {
     <div
       className={props.className}
       style={{
-          ...props.style,
-          display:'block',
-          content: `url('/images/right-arrow.png')`,
-          right: '46%',
-          zIndex: 10,
-    transition: "all .3s",
-    top: 'auto',
-    bottom: '-70px',
-        
+        ...props.style,
+        display: "block",
+        content: `url('/images/right-arrow.png')`,
+        right: "40%",
+        zIndex: 10,
+        transition: "all .3s",
+        top: "auto",
+        bottom: "-100px",
+        width: "100px",
+        height: "50px",
       }}
       onClick={props.onClick}
     />
-
   );
 };
 

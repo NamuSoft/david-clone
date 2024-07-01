@@ -7,6 +7,7 @@ import NavStore from "~/store/NavStore";
 import { AboutContentData } from "~/data/About/AboutContentData";
 import { AboutEventData } from "~/data/About/AboutEventData";
 import { AboutServiceData } from "~/data/About/AboutServiceData";
+import { HomeProejctData } from "~/data/Home/HomeProjectData";
 
 export const AboutMeContainer = () => {
   const nav = useSnapshot(NavStore.state);
@@ -16,7 +17,7 @@ export const AboutMeContainer = () => {
     aboutMeHeaderModuleProps: {
       title: "",
       navBarProps: {
-        home: "",
+        home: "/",
         showDrawer() {
           DrawerStore.open();
         },
@@ -40,6 +41,7 @@ export const AboutMeContainer = () => {
           SliderStore.close();
         },
         theme: slider.theme,
+        projects: HomeProejctData,
       },
       headerProps: {
         title: "About me",

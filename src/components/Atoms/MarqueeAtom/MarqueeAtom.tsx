@@ -1,14 +1,20 @@
-import type {  ReactNode } from "react";
-import styles from "./MarqueeAtom.module.css"; // Import CSS module
+import type { PropsWithChildren, ReactNode } from "react";
+import "./custom.css"; // Import CSS module
 
 type Props = {
-  children: ReactNode;
+  //
 };
 
-export const MarqueeAtom = ( props:Props) => {
+export const MarqueeAtom = (props: PropsWithChildren<Props>) => {
   return (
-    <div className='marquee'>
-      <div className='marquee-content'>{props.children}</div>
+    <div className='animate-marque-sec'>
+      <div className='animate-marque'>
+        <div className='marquee'>
+          <div className='track'>
+            <div className='content'>{props.children}</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

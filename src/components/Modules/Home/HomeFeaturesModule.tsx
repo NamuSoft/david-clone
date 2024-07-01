@@ -2,6 +2,7 @@ import Image from "next/image";
 import { SectionPaddingAtom } from "~/components/Atoms/SectionPaddingAtom/SectionPaddingAtom";
 import { HomeFeatures } from "~/components/Components/HomeFeatures/HomeFeatures";
 import "./custom.css";
+import { ResponsiveImgAtom } from "~/components/Atoms/ResponsiveImgAtom/ResponsiveImgAtom";
 
 type Props = {
   //
@@ -13,7 +14,7 @@ export const HomeFeaturesModule = (props: Props) => {
     <SectionPaddingAtom className='features-section relative justify-center '>
       <HomeFeatures {...props.homeFeaturesProps} />
       <div className='round-shape '>
-        <Image
+        <ResponsiveImgAtom
           src={"/images/home/spinner.png"}
           width={238}
           height={254}

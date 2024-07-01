@@ -1,5 +1,20 @@
 
 
-.item:nth-child(2n){
-    margin-top: 120px;
+  .projectItem .slick-track :nth-child(even) .here {
+    margin-top: 70px; /* Adjusted margin-top value */
+  }
+
+
+/* For viewport sizes up to 991px */
+@media (max-width: 991px)  {
+  .projectItem .slick-track :nth-child(even) .here {
+    margin-top: 120px; /* Adjusted margin-top value */
+  }
+}
+
+/* For viewport sizes below 992px */
+@media (max-width: 767px) {
+  .projectItem .slick-track :nth-child(even) .here {
+    margin-top: 0; /* Adjusted margin-top value */
+  }
 }

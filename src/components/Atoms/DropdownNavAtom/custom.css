@@ -3,7 +3,9 @@
     color: #1f1f1f;
     position: relative; /* Ensure the parent is positioned relative for absolute child */
 }
-
+.bg-base-black{
+    background-color: #1f1f1f;
+}
 @media (max-width: 1199px) {
     .header-area .main-menu .dropdown-nav {
         padding: 35px 12px;

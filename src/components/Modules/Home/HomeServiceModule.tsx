@@ -1,29 +1,31 @@
 import { ArrowDownOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import React from "react";
+import { ContainerAtom } from "~/components/Atoms/ContainerAtom/ContainerAtom";
+import { LinkAtom } from "~/components/Atoms/LinkAtom/LinkAtom";
+import { RowAtom } from "~/components/Atoms/RowAtom/RowAtom";
+import { Service } from "~/components/Components/Service/Service";
 
 // Define the Props type, including additional props if needed
 type Props = {
-  // title: string;
-  // Uncomment and use these props if needed
-  // navBarProps?: React.ComponentProps<typeof NavBarAtom>;
-  // drawerProps?: React.ComponentProps<typeof DrawerAtom>;
-  // sideDrawerProps?: React.ComponentProps<typeof SideDrawerAtom>;
+  title: string;
+  subtitle: string;
+  content: string;
+  cta: string;
+  services: React.ComponentProps<typeof Service>;
 };
 
 // HomeHeroModule functional component
 export const HomeServiceModule = (props: Props) => {
   return (
-    <div className=' mx-auto py-[200px] pb-[80px] xl:max-w-[1400px]'>
-      <div className='container mx-4 '>
-        <div className='flex flex-col items-center  align-middle lg:flex-row'>
-          <div className='lg:w-1/2'>
-            <div className='pr-[75px]'>
-              <span className='space-mono-regular mb-3 block text-base font-normal not-italic leading-[1.81rem] tracking-[8px] text-[#fff]'>
-                Accusamus Et Iust
-              </span>
-              <h2 className='italiana-regular relative pb-[10px] text-[60px] leading-[normal] text-white  lg:text-[65px] xl:text-[80px]'>
-                The way we do things in our line of work.
+    <div className='service-section section-padding'>
+      <ContainerAtom>
+        <RowAtom>
+          <div className='pl-4 pr-4 lg:w-1/2'>
+            <div className='service-left-text'>
+              <span>{props.subtitle}</span>
+              <h2 className=''>
+                {props.title}
                 <i className=' inline-block max-w-[60px]   md:relative xl:bottom-[-10px] xl:left-[-10px] xl:max-w-full'>
                   <Image
                     alt=''
@@ -41,20 +43,17 @@ export const HomeServiceModule = (props: Props) => {
                   />
                 </i>
               </h2>
-              <p className='space-mono-regular mb-[30px]  text-base font-normal not-italic leading-[1.81rem] tracking-[.68px] text-[#fff] '>
-                We are helping client to create WordPress websites with our
-                talented expert.
-              </p>
-              <a
-                className='read-more italiana-regular  text-base font-normal not-italic leading-[1.81rem] tracking-[.68px] text-[#fff] '
-                href='/services'
-              >
-                Read case study <ArrowRightOutlined className='inline' />
-              </a>
+              <p className='space-mono-regular '>{props.content}</p>
+              <LinkAtom className='read-more' href='/services'>
+                {props.cta} &nbsp;
+                <ArrowRightOutlined />
+              </LinkAtom>
             </div>
           </div>
-          <div className='lg:w-1/2'>
-            <div className='flex flex-wrap '>
+          <div className='pl-4 pr-4 text-white lg:w-1/2'>
+            <Service {...props.services} />
+
+            {/* <div className='flex flex-wrap '>
               <div className='flex basis-full flex-col md:basis-1/2'>
                 <div className='css-z1mjt4' style={{ animationDelay: "0ms" }}>
                   <div className='service-item mb-[30px]'>
@@ -171,10 +170,10 @@ export const HomeServiceModule = (props: Props) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
-        </div>
-      </div>
+        </RowAtom>
+      </ContainerAtom>
     </div>
   );
 };

@@ -5,12 +5,25 @@ import "slick-carousel/slick/slick-theme.css";
 import PrevArrow from "./PrevArrow";
 import NextArrow from "./NextArrow";
 
+
+export type Break = {
+  breakpoint: number;
+  settings: {
+    slidesToShow?: number;
+    slidesToScroll?: number;
+    infinite?: boolean;
+    dots?: boolean;
+    initialSlide?: number;
+  };
+}[];
+
 type Props = {
   children: React.ReactNode;
   className?: string;
   noarrows?: boolean;
   autoplay?: boolean;
-  show?: number
+  show?: number;
+  responsive?: Break;
 };
 
 export const SliderAtom = (props: Props) => {
@@ -27,7 +40,7 @@ export const SliderAtom = (props: Props) => {
     autoplay: props.autoplay,
     cssEase: "ease-out",
     autoplaySpeed: 4000,
-    responsive: [
+    responsive: props.responsive ?? [
       {
         breakpoint: 1024,
         settings: {
@@ -43,3 +56,4 @@ export const SliderAtom = (props: Props) => {
     </Slider>
   );
 };
+

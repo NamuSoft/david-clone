@@ -37,7 +37,7 @@ export const DropdownNavAtom = ({ item, theme }: Props) => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : -10 }}
           transition={{ duration: 0.3 }}
-          className={`sub-menu absolute left-0 z-50 mt-1 w-48  ${theme ? "bg-base-black text-white" : "base-black bg-white"}`}
+          className={`sub-menu absolute left-0 z-50  w-48  ${theme ? "bg-base-black text-white" : "base-black bg-white"}`}
           // style={{backgroundColor}}
         >
           {item.children.map((child, index) => (
