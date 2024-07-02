@@ -2,6 +2,7 @@ import Image from "next/image";
 import { SectionPaddingAtom } from "~/components/Atoms/SectionPaddingAtom/SectionPaddingAtom";
 import "./custom.css";
 import { HomeVideo } from "~/components/Components/HomeVideo/HomeVideo";
+import { ResponsiveImgAtom } from "~/components/Atoms/ResponsiveImgAtom/ResponsiveImgAtom";
 
 type Props = {
   //
@@ -13,7 +14,7 @@ export const HomeVideoModule = (props: Props) => {
     <SectionPaddingAtom className='video-section  pt-0 '>
       <HomeVideo {...props.homeVideoProps} />
       <div className='star-shape hidden lg:block'>
-        <Image
+        <ResponsiveImgAtom
           src={"/images/home/star-shape.png"}
           width={238}
           height={254}
@@ -21,7 +22,7 @@ export const HomeVideoModule = (props: Props) => {
         />
       </div>
       <div className='arrow-shape hidden lg:block'>
-        <Image
+        <ResponsiveImgAtom
           src={"/images/home/arrow-shape.png"}
           width={340}
           height={340}
