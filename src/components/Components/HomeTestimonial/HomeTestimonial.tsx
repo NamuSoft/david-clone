@@ -18,7 +18,7 @@ export const HomeTestimonial = (props: Props) => {
       <div className={styles.container}>
         <CarouselAtom>{items}</CarouselAtom>
       </div>
-      <div className={styles.arrowShape}>
+      <div className={`${styles.arrowShape} hidden md:block`}>
         <Image
           className={styles.img}
           src={"/images/home/arrowf99d3f0a.png"}
