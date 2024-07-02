@@ -53,18 +53,15 @@ export const HomeHeroModule = (props: Props) => {
                 </SlideUpAnimationAtom>
               </div>
             </div>
-            <div className='pl-4  pr-4 lg:w-2/5 xl:w-1/3'>
-              <div className='right-image relative z-[1]'>
-                <div className='right-image-mask'>
-                  <Image
+            <div className='w-full items-center   pl-4 pr-4 lg:w-2/5 xl:w-1/3'>
+              <div className='right-image relative z-[1]  justify-center'>
+                <div className='right-image-mask mx-auto align-middle'>
+                  <ResponsiveImgAtom
                     alt=''
-                    src='https://unded-next.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmask-1.7aad7307.jpg&amp;w=828&amp;q=75'
-                    width='380'
-                    height='603'
-                    decoding='async'
+                    src='/images/home/hero.jpg'
+                    width={380}
+                    height={603}
                     data-nimg='1'
-                    loading='lazy'
-                    style={{ color: "transparent", width: "100%" }}
                   />
                 </div>
                 <div className='back-shape absolute bottom-[-130px] right-[-70px] z-[-1]  xl:max-w-[70%]'>
@@ -72,15 +69,10 @@ export const HomeHeroModule = (props: Props) => {
                     className='css-17ud6we'
                     style={{ animationDelay: "0ms" }}
                   >
-                    <Image
+                    <ResponsiveImgAtom
                       src='https://unded-next.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fback-shape.50f1ac37.png&amp;w=750&amp;q=75'
-                      width='326'
-                      height='331'
-                      decoding='async'
-                      data-nimg='1'
-                      className=''
-                      loading='lazy'
-                      style={{ color: "transparent" }}
+                      width={326}
+                      height={331}
                       alt=''
                     />
                   </div>
@@ -90,7 +82,7 @@ export const HomeHeroModule = (props: Props) => {
           </RowAtom>
         </div>
 
-        <div className='hero-bottom-shape absolute bottom-[-110px] left-0 block  w-full'>
+        <div className='hero-bottom-shape absolute bottom-[-100px] left-0 block w-full  md:bottom-[-110px]'>
           <svg
             width='100%'
             height='175'

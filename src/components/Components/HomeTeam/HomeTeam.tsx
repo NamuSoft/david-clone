@@ -12,7 +12,7 @@ export const HomeTeam = (props: Props) => {
   return (
     <ContainerAtom>
       <div className='team-wrap'>
-        <div className='flex flex-row'>
+        <div className='flex flex-row justify-center'>
           <div className='grid grid-cols-12 gap-4'>
             {props.data.map((item, index) => (
               <div

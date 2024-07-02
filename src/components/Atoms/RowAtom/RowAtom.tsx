@@ -9,6 +9,8 @@ type Props = {
 
 export const RowAtom = (props: Props) => {
   return (
-    <div className={`${props.className} flex flex-wrap `}>{props.children}</div>
+    <div className={`${props.className} flex flex-wrap  justify-center`}>
+      {props.children}
+    </div>
   );
 };

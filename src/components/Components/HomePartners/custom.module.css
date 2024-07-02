@@ -59,3 +59,35 @@
 /* .partner .slick-list{
     max-height: 20px;
 } */
+
+
+.partnerItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+@media (max-width: 1200px) {
+  .partnerItem {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 992px) {
+  .partnerItem {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partnerItem {
+    padding: 4px;
+  }
+}
+
+@media (max-width: 576px) {
+  .partnerItem {
+    padding: 2px;
+  }
+}

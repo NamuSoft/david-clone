@@ -22,13 +22,13 @@ export const NavBarModule = (props: Props) => {
         <div className='container-fluid'>
           <div className='second-menu'>
             <div className='flex flex-row items-center justify-between'>
-              <div className='w-3/5 pl-4 pr-4  md:w-3/5 lg:w-1/5 xl:w-1/5'>
+              <div className='w-3/5 pl-4 pr-4  md:w-1/5 lg:w-1/5 xl:w-1/5'>
                 <NavIcon {...props.navIconProps} theme={props.theme} />
               </div>
-              <div className='hidden w-1/6  pl-4 pr-4 text-right md:w-1/6 lg:block lg:w-2/3 xl:w-2/3 xl:text-right'>
+              <div className='hidden w-1/6  pl-4 pr-4 text-right md:w-3/5 lg:block lg:w-2/3 xl:w-2/3 xl:text-right'>
                 <NavMenu {...props.navMenuProps} theme={props.theme} />
               </div>
-              <div className='w-1/4 pl-4 pr-4 text-left md:w-1/3 lg:w-1/5 xl:w-1/5'>
+              <div className='w-1/4 pl-4 pr-4 text-left md:w-1/6 lg:w-1/5 xl:w-1/5'>
                 <NavActions {...props.navActionsProps} theme={props.theme} />
               </div>
             </div>
