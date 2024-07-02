@@ -33,3 +33,93 @@
     top: auto;
     bottom: -70px;
 }
+
+.prev-arrow {
+  position: absolute;
+  width: 100px; /* Initial width */
+}
+
+/* Mobile devices (up to 600px) */
+@media (max-width: 600px) {
+  .prev-arrow {
+    left: 10% !important;
+    bottom: -50px !important;
+    height: 30px !important;
+    width: 50px !important; /* Adjust width for mobile */
+  }
+}
+
+/* Tablets (600px to 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .prev-arrow {
+    left: 20% !important;
+    bottom: -70px !important;
+    height: 40px !important;
+    width: 70px !important; /* Adjust width for tablets */
+  }
+}
+
+/* Small desktops (900px to 1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+  .prev-arrow {
+    left: 30% !important;
+    bottom: -90px !important;
+    height: 45px !important;
+    width: 90px !important; /* Adjust width for small desktops */
+  }
+}
+
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+  .prev-arrow {
+    left: 40% !important;
+    bottom: -100px !important;
+    height: 50px !important;
+    width: 100px !important; /* Adjust width for large desktops */
+  }
+}
+
+.next-arrow {
+  position: absolute;
+  width: 100px; /* Initial width */
+}
+
+/* Mobile devices (up to 600px) */
+@media (max-width: 600px) {
+  .next-arrow {
+    right: 10% !important;
+    bottom: -50px !important;
+    height: 30px !important;
+    width: 50px !important; /* Adjust width for mobile */
+  }
+}
+
+/* Tablets (600px to 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .next-arrow {
+    right: 20% !important;
+    bottom: -70px !important;
+    height: 40px !important;
+    width: 70px !important; /* Adjust width for tablets */
+  }
+}
+
+/* Small desktops (900px to 1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+  .next-arrow {
+    right: 30% !important;
+    bottom: -90px !important;
+    height: 45px !important;
+    width: 90px !important; /* Adjust width for small desktops */
+  }
+}
+
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+  .next-arrow {
+    right: 40% !important;
+    bottom: -100px !important;
+    height: 50px !important;
+    width: 100px !important; /* Adjust width for large desktops */
+  }
+}

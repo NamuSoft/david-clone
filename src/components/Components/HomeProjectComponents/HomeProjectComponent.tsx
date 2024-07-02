@@ -15,7 +15,7 @@ export const HomeProjectComponent = ({ data }: Props) => {
     <SlideUpAnimationAtom key={index} className=''>
       <ProjectAtom
         {...item}
-        className='px-30 max-auto w-[335px] justify-self-center  outline-none'
+        className='px-30 mx-30  justify-self-center outline-none '
       />
     </SlideUpAnimationAtom>
   ));
