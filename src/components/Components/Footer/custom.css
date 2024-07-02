@@ -67,27 +67,3 @@ ul {
     display: block;
 }
 
- .subscribe .form-field {
-    position: relative;
-}
-
-.subscribe .form-field input {
-    width: 100%;
-    height: 60px;
-    border-radius: 5px;
-    border: 1px solid hsla(0, 0%, 100%, .1);
-    padding: 15px 70px 15px 15px;
-    background: none;
-    color: #fff;
-}
-
-.subscribe .form-field button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 60px;
-    width: 60px;
-    background: none;
-    border: 0;
-    color: #ff4a3b;
-}

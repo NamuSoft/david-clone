@@ -1,29 +1,26 @@
-import { PortfolioPortfolioModule } from "~/components/Modules/Portfolio/PortfolioPortfolioModule";
-import { PortfolioNewsletterModule } from "~/components/Modules/Portfolio/PortfolioNewsletterModule";
-  import { Layout } from "antd";
+import { ContactMapModule } from "~/components/Modules/Contact/ContactMapModule";
+import { ContactInfoModule } from "~/components/Modules/Contact/ContactInfoModule";
+import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import { NavBarModule } from "~/components/Modules/NavBar/NavBarModule";
 import { PageTitleModule } from "~/components/Modules/PageTitle/PageTitleModule";
 import { DrawerModule } from "~/components/Modules/Drawer/DrawerModule";
 import { FooterModule } from "~/components/Modules/Footer/FooterModule";
+import { PortfolioNewsletterModule } from "~/components/Modules/Portfolio/PortfolioNewsletterModule";
 
 type Props = {
   navBarModuleProps: React.ComponentProps<typeof NavBarModule>;
-
-  portfolioPortfolioModuleProps: React.ComponentProps<
-    typeof PortfolioPortfolioModule
-  >;
-  portfolioNewsletterModuleProps: React.ComponentProps<
-    typeof PortfolioNewsletterModule
-  >;
   pageTitleModuleProps: React.ComponentProps<typeof PageTitleModule>;
   drawerModuleProps: React.ComponentProps<typeof DrawerModule>;
   footerModuleProps: React.ComponentProps<typeof FooterModule>;
+  newsletterModuleProps: React.ComponentProps<typeof PortfolioNewsletterModule>;
+  contactMapModuleProps: React.ComponentProps<typeof ContactMapModule>;
+  contactInfoModuleProps: React.ComponentProps<typeof ContactInfoModule>;
 };
 
-export const PortfolioTemplate = (props: Props) => {
+export const ContactTemplate = (props: Props) => {
   return (
-    <Layout style={{ height: "100%", position: "relative" }}>
+    <Layout style={{ height: "100%" }}>
       <Header style={{ width: "100%", height: "100%", padding: 0 }}>
         <NavBarModule {...props.navBarModuleProps} />
 
@@ -32,9 +29,10 @@ export const PortfolioTemplate = (props: Props) => {
         <DrawerModule {...props.drawerModuleProps} />
       </Header>
 
-      <Content>
-        <PortfolioPortfolioModule {...props.portfolioPortfolioModuleProps} />
-        <PortfolioNewsletterModule {...props.portfolioNewsletterModuleProps} />
+      <Content style={{ overflow: "auto" }}>
+        <ContactMapModule {...props.contactMapModuleProps} />
+        <ContactInfoModule {...props.contactInfoModuleProps} />
+        <PortfolioNewsletterModule {...props.newsletterModuleProps} />
       </Content>
 
       <Footer style={{ padding: 0 }}>
@@ -43,4 +41,3 @@ export const PortfolioTemplate = (props: Props) => {
     </Layout>
   );
 };
-  

@@ -1,15 +1,14 @@
+import { ContactTemplate } from "~/components/Templates/Contact/ContactTemplate";
 import { useSnapshot } from "valtio";
-import { AboutMeTemplate } from "~/components/Templates/AboutMe/AboutMeTemplate";
-import { NavData } from "~/data/NavData";
 import DrawerStore from "~/store/DrawerStore";
+import { NavData } from "~/data/NavData";
 import SliderStore from "~/store/SliderStore";
-import { AboutContentData } from "~/data/About/AboutContentData";
-import { AboutEventData } from "~/data/About/AboutEventData";
-import { AboutServiceData } from "~/data/About/AboutServiceData";
-
-export const AboutMeContainer = () => {
+import { NewsLetterData } from "~/data/Portfolio/newsLettereData";
+import { OfficeInfoData } from "~/data/OfficeInfoData";
+export const ContactContainer = () => {
   const drawer = useSnapshot(DrawerStore.state);
-  const aboutmeTemplateProps: React.ComponentProps<typeof AboutMeTemplate> = {
+
+  const contactTemplateProps: React.ComponentProps<typeof ContactTemplate> = {
     navBarModuleProps: {
       theme: false,
       navMenuProps: {
@@ -44,20 +43,9 @@ export const AboutMeContainer = () => {
     },
     pageTitleModuleProps: {
       pageTitleProps: {
-        title: "About me",
-        nav: ["Pages", "About Me", "#"],
+        title: "Contact Us",
+        nav: ["Home", "Contact", "#"],
       },
-    },
-    aboutMeContentModuleProps: {
-      title: "AboutMe contentModule",
-      aboutContentProps: AboutContentData,
-      eventProps: {
-        eventsData: AboutEventData,
-      },
-      serviceProps: {
-        data: AboutServiceData,
-      },
-      image: "/images/profile.png",
     },
     footerModuleProps: {
       upperFooterProps: {
@@ -65,7 +53,16 @@ export const AboutMeContainer = () => {
       },
       lowerFooterProps: {},
     },
+    newsletterModuleProps: {
+      newsLetterProps: NewsLetterData,
+    },
+    contactMapModuleProps: { title: "ContactMapModule" },
+    contactInfoModuleProps: {
+      title: "Subscribe to our newsletter for updates",
+      subTitle: "News Letter",
+      officeData: OfficeInfoData,
+    },
   };
 
-  return <AboutMeTemplate {...aboutmeTemplateProps} />;
+  return <ContactTemplate {...contactTemplateProps} />;
 };

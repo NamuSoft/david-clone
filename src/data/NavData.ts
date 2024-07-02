@@ -25,7 +25,7 @@ export const NavData: NavItem[] = [
   },
   {
     name: "Portfolio",
-    url: "/Portfolio",
+    url: "/portfolio",
   },
   {
     name: "Blog",
