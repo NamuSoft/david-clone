@@ -11,22 +11,21 @@ type Props = {
 export const NavActions = (props: Props) => {
   return (
     <div className='header-area-right'>
-      <ul>
+      <ul className=''>
         {props.theme ? (
           <>
-            <li className='flex-center'>
+            <li className='flex-center w-fill'>
               <SearchOutlined
-                style={{ color: "#ff4a3b", fontSize: 40 }}
                 onClick={props.showDrawer}
-                className='nav-icon search-toggle-btn'
+                className=' text-[30px] text-[#ff4a3b] lg:text-[40px]'
               />
             </li>
             <li>
-              <div
-                className='nav-icon right-menu-toggle-btn '
-                onClick={props.showSideDrawer}
-              >
-                <MenuOutlined style={{ color: "#fff", fontSize: 22 }} />
+              <div className='' onClick={props.showSideDrawer}>
+                <MenuOutlined
+                  style={{ color: "#fff", fontSize: 22 }}
+                  className='ml-5 md:ml-10'
+                />
               </div>
             </li>
           </>
@@ -34,7 +33,7 @@ export const NavActions = (props: Props) => {
           <li>
             <p
               onClick={props.showDrawer}
-              className='italiana-regular nav-search-txt  cursor-pointer'
+              className='italiana-regular nav-search-txt  mb-0 cursor-pointer text-center'
             >
               Search
             </p>
