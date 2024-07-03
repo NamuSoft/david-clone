@@ -10,8 +10,8 @@ export const PortfolioData: React.ComponentProps<typeof ProjectItemAtom>[] = [
       alt: "",
     },
     title: "Bussiness",
-    subTitle: "2020 - UI",
-    link: "",
+    subTitle: "2020 - Business",
+    link: "business",
   },
   {
     image: {
@@ -23,7 +23,7 @@ export const PortfolioData: React.ComponentProps<typeof ProjectItemAtom>[] = [
     },
     title: "Ui Design",
     subTitle: "2020 - UI",
-    link: "",
+    link: "ui_design",
   },
   {
     image: {
@@ -35,7 +35,7 @@ export const PortfolioData: React.ComponentProps<typeof ProjectItemAtom>[] = [
     },
     title: "Design",
     subTitle: "2020 - design",
-    link: "",
+    link: "design",
   },
 
   {
@@ -48,6 +48,6 @@ export const PortfolioData: React.ComponentProps<typeof ProjectItemAtom>[] = [
     },
     title: "Ceative",
     subTitle: "2020 - Ux",
-    link: "543",
+    link: "",
   },
 ];

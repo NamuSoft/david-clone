@@ -13,7 +13,7 @@ type Props = {
 export const OfficeInfo = (props: Props) => {
   return (
     <div>
-      <h3 className='mb-[30px] font-italiana  text-[30px] text-[#1f1f1f]'>
+      <h3 className='mb-[30px] text-center font-italiana  text-[30px] text-[#1f1f1f] md:text-left'>
         {props.title}
       </h3>
       <TwoColGridAtom

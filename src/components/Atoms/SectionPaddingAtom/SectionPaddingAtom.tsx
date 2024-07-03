@@ -1,13 +1,17 @@
-import { type ReactNode } from "react";
-import "./custom.css"
+import type { CSSProperties, PropsWithChildren } from "react";
+import "./custom.css";
 
 type Props = {
   // Add props here
-  children: ReactNode,
-  className: string,
-  // style: 
-    };
 
-export const SectionPaddingAtom = (props: Props) => {
-  return (<div className={` ${props.className} section-padding`}>{ props.children}</div>);
+  className: string;
+  style?: CSSProperties | undefined;
+};
+
+export const SectionPaddingAtom = (props: PropsWithChildren<Props>) => {
+  return (
+    <div className={` ${props.className} section-padding`} style={props.style}>
+      {props.children}
+    </div>
+  );
 };

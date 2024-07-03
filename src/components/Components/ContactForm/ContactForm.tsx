@@ -11,7 +11,7 @@ export const ContactForm = (props: Props) => {
     <div>
       <Form>
         <Row gutter={[20, 0]}>
-          <Col sm={24} md={12}>
+          <Col xs={24} sm={24} md={12}>
             <div className='form-area mb-[30px]'>
               <Input
                 placeholder='your name'
@@ -22,7 +22,7 @@ export const ContactForm = (props: Props) => {
               />
             </div>
           </Col>
-          <Col sm={24} md={12}>
+          <Col xs={24} sm={24} md={12}>
             <div className='form-area mb-[30px]'>
               <Input
                 placeholder='your email'
@@ -32,7 +32,7 @@ export const ContactForm = (props: Props) => {
               />
             </div>
           </Col>
-          <Col sm={24} md={12}>
+          <Col xs={24} sm={24} md={12}>
             <div className='form-area mb-[30px]'>
               <Input
                 placeholder='your phone'
@@ -42,7 +42,7 @@ export const ContactForm = (props: Props) => {
               />
             </div>
           </Col>
-          <Col sm={24} md={12}>
+          <Col xs={24} sm={24} md={12}>
             <div className='form-area mb-[30px]'>
               <Select
                 placeholder='your email'
@@ -66,7 +66,7 @@ export const ContactForm = (props: Props) => {
             </div>
           </Col>
         </Row>
-        <div className='submit-area'>
+        <div className='submit-area flex justify-center lg:justify-start'>
           <button type='submit' className='btn-style-2'>
             send
           </button>

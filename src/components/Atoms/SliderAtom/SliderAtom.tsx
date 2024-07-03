@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PrevArrow from "./PrevArrow";
 import NextArrow from "./NextArrow";
-
+import { type PropsWithChildren } from "react";
 
 export type Break = {
   breakpoint: number;
@@ -18,7 +18,6 @@ export type Break = {
 }[];
 
 type Props = {
-  children: React.ReactNode;
   className?: string;
   noarrows?: boolean;
   autoplay?: boolean;
@@ -26,7 +25,7 @@ type Props = {
   responsive?: Break;
 };
 
-export const SliderAtom = (props: Props) => {
+export const SliderAtom = (props: PropsWithChildren<Props>) => {
   const settings = {
     useTransform: true,
     dots: false,
