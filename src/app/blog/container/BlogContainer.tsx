@@ -4,6 +4,7 @@ import { NavData } from "~/data/NavData";
 import SliderStore from "~/store/SliderStore";
 import { useSnapshot } from "valtio";
 import { NewsLetterData } from "~/data/Portfolio/newsLettereData";
+import { BlogData } from "~/data/Blog/BlogData";
 
 export const BlogContainer = () => {
   const drawer = useSnapshot(DrawerStore.state);
@@ -56,7 +57,11 @@ export const BlogContainer = () => {
     newsletterModuleProps: {
       newsLetterProps: NewsLetterData,
     },
-    blogContentModuleProps: { title: "BlogContentModule" },
+    blogContentModuleProps: {
+      gridProps: {
+        data: BlogData,
+      },
+    },
   };
 
   return <BlogTemplate {...blogTemplateProps} />;
