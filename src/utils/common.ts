@@ -1,3 +1,5 @@
+import { Blog } from "~/components/Components/BlogGrid/BlogGrid";
+
 export function divideArray<T>(arr: T[]): [T[], T[]] {
   // Calculate the middle index
   const middleIndex = Math.ceil(arr.length / 2);
@@ -9,7 +11,6 @@ export function divideArray<T>(arr: T[]): [T[], T[]] {
   return [firstHalf, secondHalf];
 }
 
-
 export function fomartTitle(string: string): string {
   if (typeof string !== "string") return "";
 
@@ -19,3 +20,10 @@ export function fomartTitle(string: string): string {
   // Capitalize the first letter of each word
   return stringWithSpaces.replace(/\b\w/g, (char) => char.toUpperCase());
 }
+
+export const findBlogByLink = (
+  blogs: Blog[],
+  link: string
+): Blog | undefined => {
+  return blogs.find((blog) => blog.link === `/blog_single/${link}`);
+};
