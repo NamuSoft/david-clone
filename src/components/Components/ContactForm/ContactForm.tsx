@@ -75,3 +75,56 @@ export const ContactForm = (props: Props) => {
     </div>
   );
 };
+
+
+
+
+      <Form>
+        <Row gutter={[20, 0]}>
+          <Col xs={24}>
+            <div className='form-area mb-[30px]'>
+              <TextArea
+                placeholder='message'
+                name='message'
+                className='form-control'
+              />
+            </div>
+          </Col>
+          <Col xs={24} sm={24} md={12}>
+            <div className='form-area mb-[30px]'>
+              <Input
+                placeholder='your name'
+                type='text'
+                name='name'
+                className='form-control'
+                required
+              />
+            </div>
+          </Col>
+          <Col xs={24} sm={24} md={12}>
+            <div className='form-area mb-[30px]'>
+              <Input
+                placeholder='your email'
+                type='email'
+                name='email'
+                className='form-control'
+              />
+            </div>
+          </Col>
+          <Col xs={24} sm={24} md={12}>
+            <div className='form-area mb-[30px]'>
+              <Input
+                placeholder='your website'
+                type='text'
+                name='website'
+                className='form-control'
+              />
+            </div>
+          </Col>
+        </Row>
+        <div className='submit-area flex justify-center lg:justify-start'>
+          <button type='submit' className='btn-style-2'>
+            Post Comment
+          </button>
+        </div>
+      </Form>;

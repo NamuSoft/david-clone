@@ -6,6 +6,7 @@ import { useSnapshot } from "valtio";
 import { notFound, useParams } from "next/navigation";
 import { findBlogByLink } from "~/utils/common";
 import { BlogData } from "~/data/Blog/BlogData";
+import { CommonBlogData } from "~/data/Blog/CommonBlogData";
 
 export const Blog_singleContainer = () => {
   const { id } = useParams<{ id: string }>();
@@ -62,7 +63,10 @@ export const Blog_singleContainer = () => {
       },
       lowerFooterProps: {},
     },
-    blog_singleContentModuleProps: { title: "Blog_singleContentModule" },
+    blog_singleContentModuleProps: {
+      blog: blogData,
+      common: CommonBlogData,
+    },
   };
 
   return <Blog_singleTemplate {...blog_singleTemplateProps} />;
