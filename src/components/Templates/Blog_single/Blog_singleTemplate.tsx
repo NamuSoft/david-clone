@@ -5,6 +5,7 @@ import { NavBarModule } from "~/components/Modules/NavBar/NavBarModule";
 import { PageTitleModule } from "~/components/Modules/PageTitle/PageTitleModule";
 import { DrawerModule } from "~/components/Modules/Drawer/DrawerModule";
 import { FooterModule } from "~/components/Modules/Footer/FooterModule";
+import { TopButtonModule } from "~/components/Modules/TopButton/TopButtonModule";
 
 type Props = {
   blog_singleContentModuleProps: React.ComponentProps<
@@ -29,6 +30,7 @@ export const Blog_singleTemplate = (props: Props) => {
 
       <Content style={{ overflow: "auto" }}>
         <Blog_singleContentModule {...props.blog_singleContentModuleProps} />
+        <TopButtonModule />
       </Content>
 
       <Footer style={{ padding: 0 }}>

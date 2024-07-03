@@ -5,6 +5,7 @@ import { NavBarModule } from "~/components/Modules/NavBar/NavBarModule";
 import { PageTitleModule } from "~/components/Modules/PageTitle/PageTitleModule";
 import { DrawerModule } from "~/components/Modules/Drawer/DrawerModule";
 import { FooterModule } from "~/components/Modules/Footer/FooterModule";
+import { TopButtonModule } from "~/components/Modules/TopButton/TopButtonModule";
 
 type Props = {
   project_singleContentModuleProps: React.ComponentProps<
@@ -31,6 +32,7 @@ export const Project_singleTemplate = (props: Props) => {
         <Project_singleContentModule
           {...props.project_singleContentModuleProps}
         />
+        <TopButtonModule />
       </Content>
 
       <Footer style={{ padding: 0 }}>

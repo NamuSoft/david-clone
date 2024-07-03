@@ -6,6 +6,7 @@ import { PageTitleModule } from "~/components/Modules/PageTitle/PageTitleModule"
 import { DrawerModule } from "~/components/Modules/Drawer/DrawerModule";
 import { FooterModule } from "~/components/Modules/Footer/FooterModule";
 import { NewsletterModule } from "~/components/Modules/Portfolio/PortfolioNewsletterModule";
+import { TopButtonModule } from "~/components/Modules/TopButton/TopButtonModule";
 
 type Props = {
   navBarModuleProps: React.ComponentProps<typeof NavBarModule>;
@@ -30,6 +31,7 @@ export const BlogTemplate = (props: Props) => {
       <Content style={{ overflow: "auto" }}>
         <BlogContentModule {...props.blogContentModuleProps} />
         <NewsletterModule {...props.newsletterModuleProps} />
+        <TopButtonModule />
       </Content>
 
       <Footer style={{ padding: 0 }}>
