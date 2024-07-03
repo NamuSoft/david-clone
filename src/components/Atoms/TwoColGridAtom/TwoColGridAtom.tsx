@@ -1,5 +1,4 @@
 import { Col, Row } from "antd";
-import { ReactNode } from "react";
 import { divideArray } from "~/utils/common";
 
 type Props<T> = {
