@@ -16,8 +16,8 @@ export const ResponsiveImgAtom = (props: Props) => {
       className={`object-contain ${props.className}`}
       src={props.src}
       layout='responsive'
-      width={props.width}
-      height={props.height}
+      width={5000}
+      height={5000}
       alt={props.alt}
       style={{
         maxWidth: props.width,

@@ -6,33 +6,33 @@ export const NavData: NavItem[] = [
     url: "/home",
   },
   {
-    name: "Pages",
+    name: "pages",
     url: "/AboutMe",
     children: [
       {
-        name: "About Us",
+        name: "about us",
         url: "#",
       },
       {
-        name: "About Me",
+        name: "about me",
         url: "#",
       },
       {
-        name: "Service",
+        name: "service",
         url: "#",
       },
     ],
   },
   {
-    name: "Portfolio",
+    name: "portfolio",
     url: "/portfolio",
   },
   {
-    name: "Blog",
-    url: "/Blog",
+    name: "blog",
+    url: "/blog",
   },
   {
-    name: "Contact",
+    name: "contact",
     url: "/Contact",
   },
 ];
