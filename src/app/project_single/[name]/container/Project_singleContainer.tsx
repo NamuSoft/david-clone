@@ -6,12 +6,16 @@ import SliderStore from "~/store/SliderStore";
 import { useSnapshot } from "valtio";
 import { fomartTitle } from "~/utils/common";
 import { ProjectsData } from "~/data/projects/ProjectsData";
+import { PortfolioData } from "~/data/Portfolio/PortfolioData";
 
 export const Project_singleContainer = () => {
   const { name } = useParams<{ name: string }>();
   const drawer = useSnapshot(DrawerStore.state);
+  let detailsData;
   if (ProjectsData[name] === undefined) {
     notFound();
+  } else {
+    detailsData = ProjectsData[name];
   }
 
   const project_singleTemplateProps: React.ComponentProps<
@@ -61,7 +65,18 @@ export const Project_singleContainer = () => {
       },
       lowerFooterProps: {},
     },
-    project_singleContentModuleProps: { data: ProjectsData[name] },
+    project_singleContentModuleProps: {
+      details: {
+        data: ProjectsData[name],
+      },
+      recent: {
+        title: {
+          title: "Related Work",
+          subtitle: "Recent Portfolio",
+        },
+        data: PortfolioData,
+      },
+    },
   };
 
   return <Project_singleTemplate {...project_singleTemplateProps} />;

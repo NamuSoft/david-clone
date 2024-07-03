@@ -27,14 +27,16 @@ export const ProjectItemAtom = (props: Props) => {
         <div className='project-text flex justify-between py-5'>
           <div className='project-left'>
             <h2 className="mb-[0.5rem] mt-0 font-['Italiana'] text-[calc(1.325rem_+_.9vw)] font-normal leading-[1.2] text-[#1f1f1f]">
-              <LinkAtom href={props.link}>{props.title}</LinkAtom>
+              <LinkAtom href={`/project_single/${props.link}`}>
+                {props.title}
+              </LinkAtom>
             </h2>
             <span className='text-[16px] font-normal not-italic leading-[29px] text-[#ff4a3b]'>
               {props.subTitle}
             </span>
           </div>
           <div className='project-right '>
-            <ArrowBtnAtom href={props.link} />
+            <ArrowBtnAtom href={`/project_single/${props.link}`} />
           </div>
         </div>
       </div>
