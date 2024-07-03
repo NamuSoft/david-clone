@@ -1,5 +1,6 @@
 import { Col, Form, Input, Row } from "antd";
 import TextArea from "antd/es/input/TextArea";
+import "./custom.css";
 
 type Props = {
   // Add props here
