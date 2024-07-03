@@ -6,6 +6,7 @@ import { FooterModule } from "~/components/Modules/Footer/FooterModule";
 import { DrawerModule } from "~/components/Modules/Drawer/DrawerModule";
 import { NavBarModule } from "~/components/Modules/NavBar/NavBarModule";
 import { PageTitleModule } from "~/components/Modules/PageTitle/PageTitleModule";
+import { TopButtonModule } from "~/components/Modules/TopButton/TopButtonModule";
 
 type Props = {
   pageTitleModuleProps: React.ComponentProps<typeof PageTitleModule>;
@@ -28,6 +29,7 @@ export const AboutMeTemplate = (props: Props) => {
       <Content>
         {/* <AboutMeFooterModule {...props.aboutMeFooterModuleProps} /> */}
         <AboutMeContentModule {...props.aboutMeContentModuleProps} />
+        <TopButtonModule />
       </Content>
 
       <Footer style={{ padding: 0 }}>

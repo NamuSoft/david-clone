@@ -6,6 +6,7 @@ import { NavBarModule } from "~/components/Modules/NavBar/NavBarModule";
 import { PageTitleModule } from "~/components/Modules/PageTitle/PageTitleModule";
 import { DrawerModule } from "~/components/Modules/Drawer/DrawerModule";
 import { FooterModule } from "~/components/Modules/Footer/FooterModule";
+import { TopButtonModule } from "~/components/Modules/TopButton/TopButtonModule";
 
 type Props = {
   navBarModuleProps: React.ComponentProps<typeof NavBarModule>;
@@ -33,6 +34,7 @@ export const PortfolioTemplate = (props: Props) => {
       <Content>
         <PortfolioPortfolioModule {...props.portfolioPortfolioModuleProps} />
         <NewsletterModule {...props.portfolioNewsletterModuleProps} />
+        <TopButtonModule />
       </Content>
 
       <Footer style={{ padding: 0 }}>
