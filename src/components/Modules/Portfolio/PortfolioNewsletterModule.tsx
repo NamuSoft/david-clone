@@ -5,7 +5,7 @@ type Props = {
   newsLetterProps: React.ComponentProps<typeof NewsLetter>;
 };
 
-export const PortfolioNewsletterModule = (props: Props) => {
+export const NewsletterModule = (props: Props) => {
   return (
     <div className='bg-[#fdf9f6] py-[80px]'>
       <ContainerAtom>
